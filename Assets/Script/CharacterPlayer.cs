@@ -84,11 +84,11 @@ public class CharacterPlayer : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.name.Equals ("Fire"))
+        if(col.gameObject.name.Equals ("BornFire"))
         {
             healthPoint -= 1;
         }
-        if(col.gameObject.name.Equals("Fire") && healthPoint > 0)
+        if(col.gameObject.name.Equals("BornFire") && healthPoint > 0)
         {
             anim.SetTrigger("IsHurt");
             StartCoroutine("Hurt");
