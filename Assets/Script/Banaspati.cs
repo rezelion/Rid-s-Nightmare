@@ -48,7 +48,7 @@ public class Banaspati : MonoBehaviour
 		{
 			if (attackSpeed <= canAttack)
 			{
-				other.gameObject.GetComponent<CharacterPlayerHealth>().UpdateHealth(-attackDamage);
+				other.gameObject.GetComponent<CharacterPlayer>().UpdateHealth(-attackDamage);
 				canAttack = 0f;
 			}
 			else
@@ -64,7 +64,7 @@ public class Banaspati : MonoBehaviour
 		{
 			if (attackSpeed <= canAttack)
 			{
-				other.gameObject.GetComponent<CharacterPlayerHealth>().UpdateHealth(-attackDamage);
+				other.gameObject.GetComponent<CharacterPlayer>().UpdateHealth(-attackDamage);
 				canAttack = 0f;
 			}
 			else

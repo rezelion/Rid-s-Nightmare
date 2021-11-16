@@ -7,17 +7,18 @@ public class CharacterPlayer : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator anim;
+    
     float dirX, moveSpeed = 2f;
-    private float healthPoint = 100;
+    private float health = 0f;
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] private Slider healthSlider;
-    bool isHurting, isDead;
+    bool isHurt, isDead;
     bool facingRight = true;
     Vector3 localScale;
 
-    void Start()
+    private void Start()
     {
-        healthPoint = maxHealth;
+        health = maxHealth;
         healthSlider.maxValue = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -35,13 +36,12 @@ public class CharacterPlayer : MonoBehaviour
             dirX = Input.GetAxisRaw("Horizontal") * moveSpeed;
     }
 
-    
     void FixedUpdate()
     {
-        if (!isHurting)
+        if (!isHurt)
             rb.velocity = new Vector2(dirX, rb.velocity.y);
     }
-    void LateUpdate()
+     void LateUpdate()
     {
         CheckWhereToFace(); 
     }
@@ -70,10 +70,9 @@ public class CharacterPlayer : MonoBehaviour
             
         if (rb.velocity.y > 0)
             anim.SetBool("IsJumping", true);
-       
 
         // Pas Jatuh
-        if (rb.velocity.y < 0)
+       if(rb.velocity.y < 0)
        {
             anim.SetBool("IsJumping", false);
             anim.SetBool("IsFalling", true); 
@@ -91,27 +90,26 @@ public class CharacterPlayer : MonoBehaviour
     }
     public void UpdateHealth(float mod)
     {
-        healthPoint += mod;
-        if (healthPoint > maxHealth)
+        health += mod;
+        if (health > maxHealth)
         {
-            healthPoint = maxHealth;
+            health = maxHealth;
         }
-        else if (healthPoint <= 0f)
+        else if (health <= 0f)
         {
-            healthPoint = 0f;
-            healthSlider.value = healthPoint;
-
-           
-
+            health = 0f;
+            healthSlider.value = health;
+            Destroy(gameObject);
         }
     }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.name.Equals ("Banaspati"))
+        if (col.gameObject.name.Equals("Banaspati"))
         {
-            healthPoint -= 10;
+            health -= 10;
         }
-        if(col.gameObject.name.Equals("Banaspati") && healthPoint > 0)
+        if (col.gameObject.name.Equals("Banaspati") && health > 0)
         {
             anim.SetTrigger("IsHurt");
             StartCoroutine("Hurt");
@@ -121,29 +119,24 @@ public class CharacterPlayer : MonoBehaviour
             dirX = 0;
             isDead = true;
             anim.SetTrigger("IsDead");
-         
-
-            
         }
     }
+  
     private void OnGUI()
     {
         float t = Time.deltaTime / 1f;
-        healthSlider.value = Mathf.Lerp(healthSlider.value, healthPoint, t);
+        healthSlider.value = Mathf.Lerp(healthSlider.value, health, t);
     }
-   
+
     IEnumerator Hurt()
     {
-        isHurting = true;
+        isHurt = true;
         rb.velocity = Vector2.zero;
-
         if (facingRight)
             rb.AddForce(new Vector2(-200f, 200f));
         else
-            rb.AddForce(new Vector2(200f, 200f));
-
+            rb.AddForce(new Vector2(200F, 200F));
         yield return new WaitForSeconds(0.5f);
-
-        isHurting = false;
+        isHurt = false;
     }
 }
