@@ -6,7 +6,7 @@ public class CharacterPlayer : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator anim;
-    float dirX, moveSpeed = 5f;
+    float dirX, moveSpeed = 2f;
     int healthPoint = 3;
     bool isHurt, isDead;
     bool facingRight = true;
@@ -21,10 +21,10 @@ public class CharacterPlayer : MonoBehaviour
     void Update()
     {
         if (Input.GetButtonDown("Jump") && !isDead && rb.velocity.y == 0)
-            rb.AddForce(Vector2.up * 600f);
+            rb.AddForce(Vector2.up * 300f);
         if (Input.GetKey(KeyCode.LeftShift))
-            moveSpeed = 10f;
-        else moveSpeed = 5f;
+            moveSpeed = 4f;
+        else moveSpeed = 2f;
         SetAnimitionState();
         if (!isDead)
             dirX = Input.GetAxisRaw("Horizontal") * moveSpeed;
@@ -51,9 +51,9 @@ public class CharacterPlayer : MonoBehaviour
             anim.SetBool("IsJumping", false);
             anim.SetBool("IsFalling", false);
         }
-        if (Mathf.Abs(dirX) == 5 && rb.velocity.y == 0)
+        if (Mathf.Abs(dirX) == 2 && rb.velocity.y == 0)
             anim.SetBool("IsWalking", true);
-        if (Mathf.Abs(dirX) == 10 && rb.velocity.y == 0)
+        if (Mathf.Abs(dirX) == 4 && rb.velocity.y == 0)
             anim.SetBool("IsRunning", true);
         else
             anim.SetBool("IsRunning", false);
