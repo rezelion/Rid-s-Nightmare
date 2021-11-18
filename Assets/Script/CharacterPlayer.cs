@@ -123,7 +123,7 @@ public class CharacterPlayer : MonoBehaviour
         {
             health = 0f;
             healthSlider.value = health;
-            Destroy(gameObject);
+           // Destroy(gameObject);
         }
     }
 
