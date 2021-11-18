@@ -9,12 +9,22 @@ public class CharacterPlayer : MonoBehaviour
     Animator anim;
     
     float dirX, moveSpeed = 2f;
+    private float moveInput; 
     private float health = 0f;
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] private Slider healthSlider;
     bool isHurt, isDead;
     bool facingRight = true;
     Vector3 localScale;
+
+    public Transform groundCheck;
+    public LayerMask ground;
+    public float groundCheckRadius;
+    public bool isGrouded;
+
+    public int playerJumps;
+    public float Jumpforce;
+    private int tempPlayerJumps;
 
     private void Start()
     {
@@ -26,20 +36,34 @@ public class CharacterPlayer : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && !isDead && rb.velocity.y == 0)
-            rb.AddForce(Vector2.up * 300f);
+      
+        if (isGrouded)
+        {
+            tempPlayerJumps = playerJumps;
+        }
         if (Input.GetKey(KeyCode.LeftShift))
             moveSpeed = 4f;
         else moveSpeed = 2f;
         SetAnimitionState();
-        if (!isDead)
-            dirX = Input.GetAxisRaw("Horizontal") * moveSpeed;
+
+
+
+        if (Input.GetKeyDown(KeyCode.Space) && tempPlayerJumps > 0)
+        {
+            rb.velocity = Vector2.up * Jumpforce;
+            tempPlayerJumps--;
+        }
+
     }
 
     void FixedUpdate()
     {
+        if (!isDead)
+            moveInput = Input.GetAxisRaw("Horizontal") * moveSpeed;
+        isGrouded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
+
         if (!isHurt)
-            rb.velocity = new Vector2(dirX, rb.velocity.y);
+            rb.velocity = new Vector2(moveInput, rb.velocity.y);
     }
      void LateUpdate()
     {
@@ -57,9 +81,9 @@ public class CharacterPlayer : MonoBehaviour
             anim.SetBool("IsJumping", false);
             anim.SetBool("IsFalling", false);
         }
-        if (Mathf.Abs(dirX) == 2 && rb.velocity.y == 0)
+        if (Mathf.Abs(moveInput) == 2 && rb.velocity.y == 0)
             anim.SetBool("IsWalking", true);
-        if (Mathf.Abs(dirX) == 4 && rb.velocity.y == 0)
+        if (Mathf.Abs(moveInput) == 4 && rb.velocity.y == 0)
             anim.SetBool("IsRunning", true);
         else
             anim.SetBool("IsRunning", false);
@@ -80,9 +104,9 @@ public class CharacterPlayer : MonoBehaviour
     }
     void CheckWhereToFace()
     {
-        if (dirX > 0)
+        if (moveInput > 0)
             facingRight = true;
-        else if (dirX < 0)
+        else if (moveInput < 0)
             facingRight = false;
         if (((facingRight) && (localScale.x < 0)) || ((!facingRight) && (localScale.x > 0)))
             localScale.x *= -1;
