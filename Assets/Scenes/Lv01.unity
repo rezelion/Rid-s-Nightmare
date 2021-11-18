@@ -2149,6 +2149,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e339151aff69ecd48983641314ed5359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  healthSlider: {fileID: 0}
+  groundCheck: {fileID: 0}
+  ground:
+    serializedVersion: 2
+    m_Bits: 0
+  groundCheckRadius: 0
+  isGrouded: 0
+  playerJumps: 0
+  Jumpforce: 0
 --- !u!95 &1669606457
 Animator:
   serializedVersion: 3

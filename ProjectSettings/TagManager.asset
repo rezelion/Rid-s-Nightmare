@@ -44,6 +44,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackGround
+    uniqueID: 199714617
+    locked: 0
+  - name: Hantu
+    uniqueID: 3907879519
+    locked: 0
   - name: Senter
     uniqueID: 2557832587
+    locked: 0
+  - name: Grid
+    uniqueID: 282919333
+    locked: 0
+  - name: Player
+    uniqueID: 2729220853
     locked: 0
