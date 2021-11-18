@@ -129,11 +129,11 @@ public class CharacterPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.name.Equals("Banaspati"))
+        if (col.gameObject.tag == "Hantu")
         {
             health -= 10;
         }
-        if (col.gameObject.name.Equals("Banaspati") && health > 0)
+        if (col.gameObject.tag == "Hantu" && health > 0)
         {
             anim.SetTrigger("IsHurt");
             StartCoroutine("Hurt");
