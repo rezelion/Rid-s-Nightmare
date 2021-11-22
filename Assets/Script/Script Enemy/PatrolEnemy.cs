@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PatrolEnemy : MonoBehaviour
 {
-    [Header("Movement")]
-    public float speed = 3f;
 
     [Header("Attack")]
 
@@ -48,12 +46,7 @@ public class PatrolEnemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (target != null)
-        {
-            float step = speed * Time.deltaTime;
-            transform.position = Vector2.MoveTowards(transform.position, target.position, step);
-        }
-
+       
         if (berbalik)
         {
             rb.velocity = new Vector2(kecepatanGerak, rb.velocity.y);
