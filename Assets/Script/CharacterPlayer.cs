@@ -25,6 +25,7 @@ public class CharacterPlayer : MonoBehaviour
     public int playerJumps;
     public float Jumpforce;
     private int tempPlayerJumps;
+    
 
     private void Start()
     {
@@ -36,6 +37,7 @@ public class CharacterPlayer : MonoBehaviour
     }
     void Update()
     {
+       
       
         if (isGrouded)
         {
@@ -58,10 +60,11 @@ public class CharacterPlayer : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         if (!isDead)
             moveInput = Input.GetAxisRaw("Horizontal") * moveSpeed;
-        isGrouded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
 
+        isGrouded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
         if (!isHurt)
             rb.velocity = new Vector2(moveInput, rb.velocity.y);
     }
@@ -127,25 +130,36 @@ public class CharacterPlayer : MonoBehaviour
         }
     }
 
+   
     private void OnTriggerEnter2D(Collider2D col)
     {
+      
         if (col.gameObject.tag == "Hantu")
         {
             health -= 10;
         }
         if (col.gameObject.tag == "Hantu" && health > 0)
         {
+            
             anim.SetTrigger("IsHurt");
             StartCoroutine("Hurt");
+            
         }
-        else
+        if (col.gameObject.tag == "Hantu" && health == 0)
         {
-            dirX = 0;
-            isDead = true;
-            anim.SetTrigger("IsDead");
+            mati();
         }
+
+
+
+
     }
-  
+    private void mati()
+    {
+        dirX = 0;
+        isDead = true;
+        anim.SetTrigger("IsDead");
+    }
     private void OnGUI()
     {
         float t = Time.deltaTime / 1f;
