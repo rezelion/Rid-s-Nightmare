@@ -32,7 +32,7 @@ public class CharacterPlayer : MonoBehaviour
 
     // Cutdown waktu
     float currentTime = 0f;
-    float startingTime = 10f;
+    float startingTime = 1f;
     [SerializeField] Text cutdownText;
 
     
@@ -70,7 +70,7 @@ public class CharacterPlayer : MonoBehaviour
 
     void Update()
     {
-        sentermati();
+        //sentermati();
         cutdown();
         if (isGrouded)
         {
@@ -95,21 +95,34 @@ public class CharacterPlayer : MonoBehaviour
         {
             healthSenter -= 10;
         }
-        if(healthSenter <0)
-        {
-            diplayer.enabled = false;
-            diplayer1.enabled = false;
-        }
+        
     }
 
     private void cutdown()
     {
-        currentTime -= 1 * Time.deltaTime;
+        currentTime -= 1 ;
+        moveInput = Input.GetAxisRaw("Horizontal") * moveSpeed;
         cutdownText.text = currentTime.ToString("0");
-        if(currentTime <= 0 )
+        if (moveInput == 0  )
+        {
+            
+            currentTime = 1;
+        }
+        else
+            healthSenter -= 10;
+
+        if (currentTime <= 0)
         {
             currentTime = 0;
         }
+        if (healthSenter < 0)
+        {
+            diplayer.enabled = false;
+            diplayer1.enabled = false;
+        }
+
+
+
     }
 
     void FixedUpdate()
@@ -219,7 +232,7 @@ public class CharacterPlayer : MonoBehaviour
     private void OnGUI()
     {
         float t = Time.deltaTime / 1f;
-        float r = Time.deltaTime / 1f;
+        float r = Time.deltaTime / 0.1f;
         healthSlider.value = Mathf.Lerp(healthSlider.value, health, t);
         SenterSlider.value = Mathf.Lerp(SenterSlider.value, healthSenter, r);
     }
