@@ -7,7 +7,6 @@ public class CharacterPlayer : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator anim;
-    
     float dirX, moveSpeed = 2f;
     private float moveInput; 
     private float health = 0f;
@@ -16,39 +15,72 @@ public class CharacterPlayer : MonoBehaviour
     bool isHurt, isDead;
     bool facingRight = true;
     Vector3 localScale;
-
     public Transform groundCheck;
     public LayerMask ground;
     public float groundCheckRadius;
     public bool isGrouded;
-
     public int playerJumps;
     public float Jumpforce;
     private int tempPlayerJumps;
-    
 
+    // Senter 
+    public SpriteRenderer diplayer;
+    public SpriteMask diplayer1;
+    private float healthSenter = 0f;
+    [SerializeField] private float maxHealthSenter = 100f;
+    [SerializeField] private Slider SenterSlider;
+
+    // Cutdown waktu
+    float currentTime = 0f;
+    float startingTime = 10f;
+    [SerializeField] Text cutdownText;
+
+    
     private void Start()
     {
+
+        currentTime = startingTime;
         health = maxHealth;
         healthSlider.maxValue = maxHealth;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         localScale = transform.localScale;
+
+        // Senter
+        healthSenter = maxHealthSenter;
+        SenterSlider.maxValue = maxHealthSenter;
+
+
     }
+    // Senter
+    public void UpdateHealthSenter(float mod)
+    {
+        healthSenter += mod;
+        if (healthSenter > maxHealthSenter)
+        {
+            healthSenter = maxHealthSenter;
+        }
+        else if (healthSenter <= 0f)
+        {
+            healthSenter = 0f;
+            SenterSlider.value = healthSenter;
+            // Destroy(gameObject);
+        }
+    }
+
     void Update()
     {
-       
-      
+        sentermati();
+        cutdown();
         if (isGrouded)
         {
             tempPlayerJumps = playerJumps;
         }
         if (Input.GetKey(KeyCode.LeftShift))
-            moveSpeed = 4f;
+            moveSpeed = 4f ;
+        
         else moveSpeed = 2f;
         SetAnimitionState();
-
-
 
         if (Input.GetKeyDown(KeyCode.Space) && tempPlayerJumps > 0)
         {
@@ -57,10 +89,33 @@ public class CharacterPlayer : MonoBehaviour
         }
 
     }
+    private void sentermati()
+    {
+       if(rb.velocity != Vector2.zero)
+        {
+            healthSenter -= 10;
+        }
+        if(healthSenter <0)
+        {
+            diplayer.enabled = false;
+            diplayer1.enabled = false;
+        }
+    }
+
+    private void cutdown()
+    {
+        currentTime -= 1 * Time.deltaTime;
+        cutdownText.text = currentTime.ToString("0");
+        if(currentTime <= 0 )
+        {
+            currentTime = 0;
+        }
+    }
 
     void FixedUpdate()
     {
-        
+
+       
         if (!isDead)
             moveInput = Input.GetAxisRaw("Horizontal") * moveSpeed;
 
@@ -70,6 +125,7 @@ public class CharacterPlayer : MonoBehaviour
     }
      void LateUpdate()
     {
+        
         CheckWhereToFace(); 
     }
     void SetAnimitionState()
@@ -163,7 +219,9 @@ public class CharacterPlayer : MonoBehaviour
     private void OnGUI()
     {
         float t = Time.deltaTime / 1f;
+        float r = Time.deltaTime / 1f;
         healthSlider.value = Mathf.Lerp(healthSlider.value, health, t);
+        SenterSlider.value = Mathf.Lerp(SenterSlider.value, healthSenter, r);
     }
 
     IEnumerator Hurt()
