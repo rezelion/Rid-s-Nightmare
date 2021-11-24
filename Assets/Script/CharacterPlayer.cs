@@ -103,13 +103,13 @@ public class CharacterPlayer : MonoBehaviour
         currentTime -= 1 ;
         moveInput = Input.GetAxisRaw("Horizontal") * moveSpeed;
         cutdownText.text = currentTime.ToString("0");
-        if (moveInput == 0  )
+        if (moveInput == 0 * Time.deltaTime  )
         {
             
             currentTime = 1;
         }
         else
-            healthSenter -= 10;
+            healthSenter -= 10 * Time.deltaTime;
 
         if (currentTime <= 0)
         {
@@ -121,9 +121,14 @@ public class CharacterPlayer : MonoBehaviour
             diplayer1.enabled = false;
         }
 
+       
+
 
 
     }
+
+  
+   
 
     void FixedUpdate()
     {
@@ -199,7 +204,7 @@ public class CharacterPlayer : MonoBehaviour
         }
     }
 
-   
+    
     private void OnTriggerEnter2D(Collider2D col)
     {
       
@@ -219,6 +224,11 @@ public class CharacterPlayer : MonoBehaviour
             mati();
         }
 
+        if (col.gameObject.CompareTag("Battery"))
+        {
+            Destroy(col.gameObject);
+            healthSenter += 20;
+        }
 
 
 
