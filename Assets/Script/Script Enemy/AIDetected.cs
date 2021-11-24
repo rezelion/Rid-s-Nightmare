@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AIDetected : MonoBehaviour
 {
-
+    
 
     [Header("Attack")]
 
@@ -24,11 +24,16 @@ public class AIDetected : MonoBehaviour
     Transform player;
 
     [SerializeField]
+    Transform posisiAwalMusuh;
+
+    [SerializeField]
     float agroRange;
 
     [SerializeField]
     float moveSpeed;
 
+    public float kecepatanGerak;
+    public bool berbalik;
     Rigidbody2D rb2d;
 
     void Start()
@@ -48,7 +53,6 @@ public class AIDetected : MonoBehaviour
         }
     }
 
-
     void Update()
     {
         float distToPlayer = Vector2.Distance(transform.position, player.position);
@@ -65,22 +69,38 @@ public class AIDetected : MonoBehaviour
 
     void ChasePlayer()
     {
-        if(transform.position.x < player.position.x)
+        GetComponent<SpriteRenderer>().flipX = (transform.position.x < player.position.x);
+        if (transform.position.x < player.position.x)
         {
             rb2d.velocity = new Vector2(moveSpeed, 0);
-            transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            
         }
 
         else
         {
             rb2d.velocity = new Vector2(-moveSpeed, 0);
-            transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            
         }
     }
 
     void StopChasingPlayer()
     {
-        rb2d.velocity = new Vector2(0, 0);
+        GetComponent<SpriteRenderer>().flipX = (transform.position.x < posisiAwalMusuh.position.x);
+        if (Vector2.Distance(transform.position, posisiAwalMusuh.position) < 0.1f)
+        {
+            rb2d.velocity = Vector2.zero;
+        }
+        else 
+        {
+            if (transform.position.x < posisiAwalMusuh.position.x)
+            {
+                rb2d.velocity = new Vector2(moveSpeed, 0);
+            }
+            else
+            {
+                rb2d.velocity = new Vector2(-moveSpeed, 0);
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -121,6 +141,7 @@ public class AIDetected : MonoBehaviour
         {
             target = other.transform;
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -128,6 +149,7 @@ public class AIDetected : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             target = null;
-        }
+            
+        }   
     }
 }
