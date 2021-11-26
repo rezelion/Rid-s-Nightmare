@@ -33,12 +33,17 @@ public class CharacterPlayer : MonoBehaviour
     // Cutdown waktu
     float currentTime = 0f;
     float startingTime = 1f;
-    [SerializeField] Text cutdownText;
+    [SerializeField] Text dieu;
 
-    
+    // waktu game over
+    float currentTime1 = 0f;
+   public float startingTime1 = 1f;
+    [SerializeField] Text cutdown1;
+
+
     private void Start()
     {
-
+        currentTime1 = startingTime1;
         currentTime = startingTime;
         health = maxHealth;
         healthSlider.maxValue = maxHealth;
@@ -70,6 +75,7 @@ public class CharacterPlayer : MonoBehaviour
 
     void Update()
     {
+        waktu();
         //sentermati();
         cutdown();
         if (isGrouded)
@@ -102,14 +108,14 @@ public class CharacterPlayer : MonoBehaviour
     {
         currentTime -= 1 ;
         moveInput = Input.GetAxisRaw("Horizontal") * moveSpeed;
-        cutdownText.text = currentTime.ToString("0");
+        dieu.text = currentTime.ToString("0");
         if (moveInput == 0 * Time.deltaTime  )
         {
             
             currentTime = 1;
         }
         else
-            healthSenter -= 10 * Time.deltaTime;
+            healthSenter -= 2 * Time.deltaTime;
 
         if (currentTime <= 0)
         {
@@ -120,13 +126,20 @@ public class CharacterPlayer : MonoBehaviour
             diplayer.enabled = false;
             diplayer1.enabled = false;
         }
-
-       
-
-
-
     }
 
+    private void waktu ()
+    {
+        currentTime1 -= 1 * Time.deltaTime;
+        cutdown1.text = currentTime1.ToString("0");
+        if (currentTime1 <= 0)
+        {
+            currentTime1 = 0;
+            mati();
+            moveInput = 0;
+        }
+        
+    }
   
    
 
@@ -228,6 +241,8 @@ public class CharacterPlayer : MonoBehaviour
         {
             Destroy(col.gameObject);
             healthSenter += 20;
+            diplayer.enabled = true;
+            diplayer1.enabled = true;
         }
 
 
