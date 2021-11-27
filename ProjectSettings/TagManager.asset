@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Balik
+  - Hantu
+  - Kid
   layers:
   - Default
   - TransparentFX
@@ -13,8 +16,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Ground
+  - Action
   - 
   - 
   - 
@@ -40,4 +43,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 479062579
+    locked: 0
+  - name: Hantu
+    uniqueID: 1070505853
+    locked: 0
+  - name: Senter
+    uniqueID: 1932286759
+    locked: 0
+  - name: Grid
+    uniqueID: 1960844271
+    locked: 0
+  - name: Player
+    uniqueID: 2490858477
     locked: 0
