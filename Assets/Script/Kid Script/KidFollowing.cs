@@ -54,7 +54,7 @@ public class KidFollowing : MonoBehaviour
     void StopChasingPlayer()
     {
         GetComponent<SpriteRenderer>().flipX = (transform.position.x > posisiAwalAnak.position.x);
-        if (Vector2.Distance(transform.position, posisiAwalAnak.position) < 0.1f)
+        if (Vector2.Distance(transform.position, posisiAwalAnak.position) < 1f)
         {
             rb2d.velocity = Vector2.zero;
         }
