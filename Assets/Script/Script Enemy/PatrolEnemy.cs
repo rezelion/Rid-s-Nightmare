@@ -29,7 +29,7 @@ public class PatrolEnemy : MonoBehaviour
     {
         health = maxHealth;
 
-        berbalik = true;
+        berbalik = false;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -96,7 +96,7 @@ public class PatrolEnemy : MonoBehaviour
 
         if (other.gameObject.CompareTag("Balik"))
         {
-            berbalik = !berbalik;
+            berbalik =! berbalik;
         }
         if (other.gameObject.tag == "Player")
         {

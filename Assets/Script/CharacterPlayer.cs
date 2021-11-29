@@ -40,9 +40,20 @@ public class CharacterPlayer : MonoBehaviour
    public float startingTime1 = 1f;
     [SerializeField] Text cutdown1;
 
+    // Puzzel
+    [SerializeField]
+    GameObject codePanel, ClosedSafe, OpenedSafe;
+    public static bool isSafeOpened = false;
+
 
     private void Start()
     {
+        // Puzzel
+        codePanel.SetActive(false);
+        ClosedSafe.SetActive(true);
+        OpenedSafe.SetActive(false);
+
+
         currentTime1 = startingTime1;
         currentTime = startingTime;
         health = maxHealth;
@@ -92,6 +103,14 @@ public class CharacterPlayer : MonoBehaviour
         {
             rb.velocity = Vector2.up * Jumpforce;
             tempPlayerJumps--;
+        }
+
+        // Puzzel
+        if(isSafeOpened)
+        {
+            codePanel.SetActive(false);
+            ClosedSafe.SetActive(false);
+            OpenedSafe.SetActive(true);
         }
 
     }
@@ -221,6 +240,10 @@ public class CharacterPlayer : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
       
+        if(col.gameObject.name.Equals("TekaTeki") && !isSafeOpened)
+        {
+            codePanel.SetActive(true);
+        }
         if (col.gameObject.tag == "Hantu")
         {
             health -= 10;
@@ -244,9 +267,13 @@ public class CharacterPlayer : MonoBehaviour
             diplayer.enabled = true;
             diplayer1.enabled = true;
         }
-
-
-
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.name.Equals("TekaTeki"))
+        {
+            codePanel.SetActive(false);
+        }
     }
     private void mati()
     {
