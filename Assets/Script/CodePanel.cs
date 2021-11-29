@@ -13,6 +13,7 @@ public class CodePanel : MonoBehaviour
         if (codeTextValue == "1234")
         {
             CharacterPlayer.isSafeOpened = true;
+          
         }
             if (codeTextValue.Length >= 4)
                 codeTextValue = "";

@@ -42,7 +42,7 @@ public class CharacterPlayer : MonoBehaviour
 
     // Puzzel
     [SerializeField]
-    GameObject codePanel, ClosedSafe, OpenedSafe;
+    GameObject codePanel, ClosedSafe, OpenedSafe, Key;
     public static bool isSafeOpened = false;
 
 
@@ -52,6 +52,7 @@ public class CharacterPlayer : MonoBehaviour
         codePanel.SetActive(false);
         ClosedSafe.SetActive(true);
         OpenedSafe.SetActive(false);
+        Key.SetActive(false);
 
 
         currentTime1 = startingTime1;
@@ -111,6 +112,7 @@ public class CharacterPlayer : MonoBehaviour
             codePanel.SetActive(false);
             ClosedSafe.SetActive(false);
             OpenedSafe.SetActive(true);
+            Key.SetActive(true);
         }
 
     }
