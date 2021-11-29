@@ -6,6 +6,9 @@ using UnityEngine;
 public class KidFollowing : MonoBehaviour
 {
     [SerializeField]
+    AccelJunpKid lompatAnak;
+
+    [SerializeField]
     Transform player;
 
     [SerializeField]
@@ -19,6 +22,28 @@ public class KidFollowing : MonoBehaviour
 
     Rigidbody2D rb2d;
 
+    bool isFollowing;
+
+    public float Jumpforce;
+    private void OnEnable()
+    {
+        lompatAnak.onHit += HandleonHit;
+    }
+
+    private void HandleonHit(AccelJunpKid obj)
+    {
+        if (isFollowing)
+        {
+            rb2d.velocity = new Vector2(rb2d.velocity.x, Jumpforce);
+        }
+        
+    } 
+
+    private void OnDisable()
+    {
+        lompatAnak.onHit -= HandleonHit;
+    }
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -26,8 +51,8 @@ public class KidFollowing : MonoBehaviour
     void Update()
     {
         float distToPlayer = Vector2.Distance(transform.position, player.position);
-        
-        if(distToPlayer < agroRange)
+        isFollowing = distToPlayer < agroRange;
+        if(isFollowing)
         {
             ChasePlayer();
         }
@@ -38,18 +63,22 @@ public class KidFollowing : MonoBehaviour
     }
     void ChasePlayer()
     {
-        GetComponent<SpriteRenderer>().flipX = (transform.position.x > player.position.x);
-        if (transform.position.x < player.position.x)
+        if((Vector2.Distance(transform.position, player.position) < 1.3f))
         {
-            rb2d.velocity = new Vector2(moveSpeed, 0);
-
+            rb2d.velocity = Vector2.zero;
         }
-
         else
         {
-            rb2d.velocity = new Vector2(-moveSpeed, 0);
-
+            if (transform.position.x < player.position.x)
+            {
+                rb2d.velocity = new Vector2(moveSpeed, rb2d.velocity.y);
+            }
+            else
+            {
+                rb2d.velocity = new Vector2(-moveSpeed, rb2d.velocity.y);
+            }
         }
+        GetComponent<SpriteRenderer>().flipX = (transform.position.x > player.position.x);
     }
     void StopChasingPlayer()
     {
@@ -62,11 +91,11 @@ public class KidFollowing : MonoBehaviour
         {
             if (transform.position.x < posisiAwalAnak.position.x)
             {
-                rb2d.velocity = new Vector2(moveSpeed, 0);
+                rb2d.velocity = new Vector2(moveSpeed, rb2d.velocity.y);
             }
             else
             {
-                rb2d.velocity = new Vector2(-moveSpeed, 0);
+                rb2d.velocity = new Vector2(-moveSpeed, rb2d.velocity.y);
             }
         }
     }

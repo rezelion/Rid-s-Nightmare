@@ -86,7 +86,7 @@ public class AIDetected : MonoBehaviour
     void StopChasingPlayer()
     {
         GetComponent<SpriteRenderer>().flipX = (transform.position.x < posisiAwalMusuh.position.x);
-        if (Vector2.Distance(transform.position, posisiAwalMusuh.position) < 0.1f)
+        if (Vector2.Distance(transform.position, posisiAwalMusuh.position) < 1f)
         {
             rb2d.velocity = Vector2.zero;
         }
