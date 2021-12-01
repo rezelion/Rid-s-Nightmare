@@ -272,10 +272,10 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 256
-  groundCheckRadius: 0.3
+  groundCheckRadius: 2.5
   isGrouded: 0
   playerJumps: 1
-  Jumpforce: 5
+  Jumpforce: 6
   diplayer: {fileID: 217934943}
   diplayer1: {fileID: 217934942}
   maxHealthSenter: 50
@@ -1615,7 +1615,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!4 &305704954
 Transform:
@@ -1737,7 +1737,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!4 &361329572
 Transform:
@@ -3868,8 +3868,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04, y: 0}
-  m_Size: {x: 0.16040187, y: 0.47999996}
+  m_Offset: {x: -0.048461843, y: -4.5199504}
+  m_Size: {x: 6.313324, y: 17.008558}
   m_Direction: 0
 --- !u!114 &1166541090
 MonoBehaviour:
@@ -3889,7 +3889,7 @@ MonoBehaviour:
   maxHealth: 100
   healthSlider: {fileID: 1371182706}
   agroRange: 5
-  moveSpeed: 1.4
+  moveSpeed: 2
   isGrouded: 0
   groundCheck: {fileID: 1707274875}
   ground:
@@ -3907,7 +3907,7 @@ Animator:
   m_GameObject: {fileID: 1166541088}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5f882c248c71fe7449145a3cd4103de4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7c15560e351a2ab419fd574ff64396c0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3974,7 +3974,7 @@ SpriteRenderer:
   m_SortingLayerID: 1932286759
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: 60ce21095bdbcc64aa7873eeee105c6d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b507f3f452bb5f84a80ecd0fcef1ffa7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3993,8 +3993,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1166541088}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.65, y: -1.69, z: -0.27433726}
-  m_LocalScale: {x: 2.5719163, y: 2.792184, z: 0.679}
+  m_LocalPosition: {x: -16.183, y: -1.3, z: -0.27433726}
+  m_LocalScale: {x: 0.1385128, y: 0.0653167, z: 0.679}
   m_Children:
   - {fileID: 1707274875}
   - {fileID: 588999826}
