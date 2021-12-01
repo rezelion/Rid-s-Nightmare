@@ -73,6 +73,18 @@ public class PatrolEnemy : MonoBehaviour
                 canAttack += Time.deltaTime;
             }
         }
+        if (other.gameObject.tag == "Kid")
+        {
+            if (attackSpeed <= canAttack)
+            {
+                other.gameObject.GetComponent<KidFollowing>().UpdateHealth(-attackDamage);
+                canAttack = 0f;
+            }
+            else
+            {
+                canAttack += Time.deltaTime;
+            }
+        }
     }
 
     private void OnCollisionStay2D(Collision2D other)
@@ -82,6 +94,18 @@ public class PatrolEnemy : MonoBehaviour
             if (attackSpeed <= canAttack)
             {
                 other.gameObject.GetComponent<CharacterPlayer>().UpdateHealth(-attackDamage);
+                canAttack = 0f;
+            }
+            else
+            {
+                canAttack += Time.deltaTime;
+            }
+        }
+        if (other.gameObject.tag == "Kid")
+        {
+            if (attackSpeed <= canAttack)
+            {
+                other.gameObject.GetComponent<KidFollowing>().UpdateHealth(-attackDamage);
                 canAttack = 0f;
             }
             else
@@ -102,11 +126,19 @@ public class PatrolEnemy : MonoBehaviour
         {
             target = other.transform;
         }
+        if (other.gameObject.tag == "Kid")
+        {
+            target = other.transform;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
+        {
+            target = null;
+        }
+        if (other.gameObject.tag == "Kid")
         {
             target = null;
         }
