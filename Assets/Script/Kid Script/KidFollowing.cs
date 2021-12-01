@@ -77,6 +77,7 @@ public class KidFollowing : MonoBehaviour
     }
     void Update()
     {
+        SetAnimitionState();
         float distToPlayer = Vector2.Distance(transform.position, player.position);
         isFollowing = distToPlayer < agroRange;
         if(isFollowing)
@@ -87,6 +88,7 @@ public class KidFollowing : MonoBehaviour
         {
             StopChasingPlayer();
         }
+        SetAnimitionState();
     }
     void ChasePlayer()
     {
@@ -105,7 +107,7 @@ public class KidFollowing : MonoBehaviour
                 rb2d.velocity = new Vector2(-moveSpeed, rb2d.velocity.y);
             }
         }
-        GetComponent<SpriteRenderer>().flipX = (transform.position.x > player.position.x);
+        GetComponent<SpriteRenderer>().flipX = (-transform.position.x > -player.position.x);
     }
     void StopChasingPlayer()
     {
@@ -127,17 +129,7 @@ public class KidFollowing : MonoBehaviour
         }
     }
 
-    private void waktu()
-    {
-        currentTime1 -= 1 * Time.deltaTime;
-        if (currentTime1 <= 0)
-        {
-            currentTime1 = 0;
-            mati();
-            moveInput = 0;
-        }
-
-    }
+   
 
    /* void FixedUpdate()
     {
@@ -150,16 +142,12 @@ public class KidFollowing : MonoBehaviour
         if (!isHurt)
             rb2d.velocity = new Vector2(moveInput, rb2d.velocity.y);
     }*/
-    void LateUpdate()
-    {
-
-        CheckWhereToFace();
-    }
+   
     void SetAnimitionState()
     {
         if (dirX == 0)
         {
-            anim.SetBool("IsWalking", false);
+           // anim.SetBool("IsWalking", false);
             anim.SetBool("IsRunning", false);
         }
         if (rb2d.velocity.y == 0)
@@ -167,7 +155,7 @@ public class KidFollowing : MonoBehaviour
             anim.SetBool("IsJumping", false);
             anim.SetBool("IsFalling", false);
         }
-        if (Mathf.Abs(moveInput) == 2 && rb2d.velocity.y == 0)
+        if (moveSpeed == 2)
             anim.SetBool("IsWalking", true);
         if (Mathf.Abs(moveInput) == 4 && rb2d.velocity.y == 0)
             anim.SetBool("IsRunning", true);
@@ -187,16 +175,7 @@ public class KidFollowing : MonoBehaviour
             anim.SetBool("IsFalling", true);
         }
     }
-    void CheckWhereToFace()
-    {
-        if (moveInput > 0)
-            facingRight = true;
-        else if (moveInput < 0)
-            facingRight = false;
-        if (((facingRight) && (localScale.x < 0)) || ((!facingRight) && (localScale.x > 0)))
-            localScale.x *= -1;
-        transform.localScale = localScale;
-    }
+   
     public void UpdateHealth(float mod)
     {
         health += mod;
@@ -212,26 +191,15 @@ public class KidFollowing : MonoBehaviour
         }
     }
 
-    private void mati()
-    {
-        dirX = 0;
-        isDead = true;
-        anim.SetTrigger("IsDead");
-    }
+   
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Hantu")
         {
             health -= 10;
         }
-        if (col.gameObject.tag == "Hantu" && health > 0)
-        {
-            StartCoroutine("Hurt");
-        }
-        if (col.gameObject.tag == "Hantu" && health == 0)
-        {
-            mati();
-        }
+      
+      
     }
     
     private void OnGUI()
@@ -240,15 +208,5 @@ public class KidFollowing : MonoBehaviour
         float r = Time.deltaTime / 0.1f;
         healthSlider.value = Mathf.Lerp(healthSlider.value, health, t);
     }
-    IEnumerator Hurt()
-    {
-        isHurt = true;
-        rb2d.velocity = Vector2.zero;
-        if (facingRight)
-            rb2d.AddForce(new Vector2(-200f, 200f));
-        else
-            rb2d.AddForce(new Vector2(200F, 200F));
-        yield return new WaitForSeconds(0.5f);
-        isHurt = false;
-    }
+   
 }

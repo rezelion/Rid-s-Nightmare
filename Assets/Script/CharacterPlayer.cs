@@ -216,9 +216,9 @@ public class CharacterPlayer : MonoBehaviour
     void CheckWhereToFace()
     {
         if (moveInput > 0)
-            facingRight = true;
-        else if (moveInput < 0)
             facingRight = false;
+        else if (moveInput < 0)
+            facingRight = true;
         if (((facingRight) && (localScale.x < 0)) || ((!facingRight) && (localScale.x > 0)))
             localScale.x *= -1;
         transform.localScale = localScale;
