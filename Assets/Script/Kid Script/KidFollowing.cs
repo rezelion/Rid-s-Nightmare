@@ -92,7 +92,7 @@ public class KidFollowing : MonoBehaviour
     }
     void ChasePlayer()
     {
-        if((Vector2.Distance(transform.position, player.position) < 1.3f))
+        if((Vector2.Distance(transform.position, player.position) < 1.9f))
         {
             rb2d.velocity = Vector2.zero;
         }
@@ -131,18 +131,7 @@ public class KidFollowing : MonoBehaviour
 
    
 
-   /* void FixedUpdate()
-    {
 
-
-        if (!isDead)
-            moveInput = Input.GetAxisRaw("Horizontal") * moveSpeed;
-
-        isGrouded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
-        if (!isHurt)
-            rb2d.velocity = new Vector2(moveInput, rb2d.velocity.y);
-    }*/
-   
     void SetAnimitionState()
     {
         if (dirX == 0)
