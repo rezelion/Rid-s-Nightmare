@@ -45,9 +45,20 @@ public class CharacterPlayer : MonoBehaviour
     GameObject codePanel, ClosedSafe, OpenedSafe, Key;
     public static bool isSafeOpened = false;
 
+    // Lemari
+    [SerializeField]
+    GameObject LemariTutup1, LemariBuka1, Textlemari;
+
+
+
 
     private void Start()
     {
+        // Lemari
+        LemariBuka1.SetActive(false);
+        LemariTutup1.SetActive(true);
+        Textlemari.SetActive(false);
+
         // Puzzel
         codePanel.SetActive(false);
         ClosedSafe.SetActive(true);
@@ -106,6 +117,7 @@ public class CharacterPlayer : MonoBehaviour
             tempPlayerJumps--;
         }
 
+        
         // Puzzel
         if(isSafeOpened)
         {
@@ -241,6 +253,10 @@ public class CharacterPlayer : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D col)
     {
+        if( col.gameObject.name.Equals("Lemari"))
+        {
+            Textlemari.SetActive(true);
+        }
       
         if(col.gameObject.name.Equals("TekaTeki") && !isSafeOpened)
         {
@@ -275,6 +291,10 @@ public class CharacterPlayer : MonoBehaviour
         if(collision.gameObject.name.Equals("TekaTeki"))
         {
             codePanel.SetActive(false);
+        }
+        if (collision.gameObject.name.Equals("Lemari"))
+        {
+            Textlemari.SetActive(false);
         }
     }
     private void mati()
