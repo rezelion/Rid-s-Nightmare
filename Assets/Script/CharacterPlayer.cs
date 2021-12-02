@@ -52,6 +52,9 @@ public class CharacterPlayer : MonoBehaviour
     // Lemari
     [SerializeField]
     GameObject LemariTutup1, LemariBuka1, Textlemari;
+
+    [SerializeField]
+    GameObject Player, anak;
     
 
     //Don't destroy On Load ()
@@ -117,12 +120,7 @@ public class CharacterPlayer : MonoBehaviour
 
     void Update()
     {
-        if(Textlemari == true)
-        {
-
-            OpenLemari();
-
-        }
+       
         
 
         waktu();
@@ -290,6 +288,8 @@ public class CharacterPlayer : MonoBehaviour
         {
             LemariBuka1.SetActive(true);
             LemariTutup1.SetActive(false);
+            Player.SetActive(false);
+            anak.SetActive(false);  
         }
     }
     private void OnTriggerEnter2D(Collider2D col)
@@ -298,6 +298,7 @@ public class CharacterPlayer : MonoBehaviour
         {
             
             Textlemari.SetActive(true);
+            OpenLemari();
            
 
 
