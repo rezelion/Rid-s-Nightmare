@@ -29,14 +29,15 @@ public class KidFollowing : MonoBehaviour
 
     Animator anim;
     public bool isGrouded;
+    bool isHurt, isDead;
     private float moveInput;
     public Transform groundCheck;
     public LayerMask ground;
     public float groundCheckRadius;
 
     Vector3 localScale;
-    bool isHurt, isDead;
-    bool facingRight = true;
+    
+    bool  facingRight = true;
     Rigidbody2D rb2d;
 
     bool isFollowing;
@@ -134,40 +135,22 @@ public class KidFollowing : MonoBehaviour
 
     void SetAnimitionState()
     {
-        if (dirX == 0)
-        {
-           // anim.SetBool("IsWalking", false);
-            anim.SetBool("IsRunning", false);
-        }
-        if (rb2d.velocity.y == 0)
-        {
-            anim.SetBool("IsJumping", false);
-            anim.SetBool("IsFalling", false);
-        }
+   
         if (moveSpeed == 2)
             anim.SetBool("IsWalking", true);
-        if (Mathf.Abs(moveInput) == 4 && rb2d.velocity.y == 0)
-            anim.SetBool("IsRunning", true);
-        else
-            anim.SetBool("IsRunning", false);
-        if (Input.GetKey(KeyCode.DownArrow))
-            anim.SetBool("IsCrouch", true);
-        else
-            anim.SetBool("IsCrouch", false);
-
-        if (rb2d.velocity.y > 0)
-            anim.SetBool("IsJumping", true);
-        // Pas Jatuh
-        if (rb2d.velocity.y < 0)
-        {
-            anim.SetBool("IsJumping", false);
-            anim.SetBool("IsFalling", true);
-        }
-    }
    
+        
+    }
+    private void mati()
+    {
+       
+        isDead = true;
+        anim.SetTrigger("IsDead");
+    }
     public void UpdateHealth(float mod)
     {
         health += mod;
+     
         if (health > maxHealth)
         {
             health = maxHealth;
@@ -176,8 +159,9 @@ public class KidFollowing : MonoBehaviour
         {
             health = 0f;
             healthSlider.value = health;
-            // Destroy(gameObject);
+           
         }
+        
     }
 
    
@@ -187,8 +171,11 @@ public class KidFollowing : MonoBehaviour
         {
             health -= 10;
         }
-      
-      
+
+        if (col.gameObject.tag == "Hantu" && health == 0)
+        {
+            mati();
+        }
     }
     
     private void OnGUI()

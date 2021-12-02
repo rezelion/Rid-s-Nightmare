@@ -52,6 +52,7 @@ public class CharacterPlayer : MonoBehaviour
     // Lemari
     [SerializeField]
     GameObject LemariTutup1, LemariBuka1, Textlemari;
+    
 
     //Don't destroy On Load ()
     private void Awake()
@@ -116,6 +117,14 @@ public class CharacterPlayer : MonoBehaviour
 
     void Update()
     {
+        if(Textlemari == true)
+        {
+
+            OpenLemari();
+
+        }
+        
+
         waktu();
         //sentermati();
         cutdown();
@@ -146,6 +155,8 @@ public class CharacterPlayer : MonoBehaviour
         }
 
     }
+
+  
     private void sentermati()
     {
        if(rb.velocity != Vector2.zero)
@@ -197,7 +208,9 @@ public class CharacterPlayer : MonoBehaviour
     void FixedUpdate()
     {
 
-       
+
+        
+
         if (!isDead)
             moveInput = Input.GetAxisRaw("Horizontal") * moveSpeed;
 
@@ -207,7 +220,10 @@ public class CharacterPlayer : MonoBehaviour
     }
      void LateUpdate()
     {
-        
+  
+       
+          
+
         CheckWhereToFace(); 
     }
     void SetAnimitionState()
@@ -268,15 +284,33 @@ public class CharacterPlayer : MonoBehaviour
         }
     }
 
-    
+    public void OpenLemari()
+    {
+        if (Input.GetKey(KeyCode.R))
+        {
+            LemariBuka1.SetActive(true);
+            LemariTutup1.SetActive(false);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if( col.gameObject.name.Equals("Lemari"))
+        if (col.gameObject.name.Equals("Lemari") )
         {
+            
             Textlemari.SetActive(true);
+           
+
+
+
         }
-      
-        if(col.gameObject.name.Equals("TekaTeki") && !isSafeOpened)
+         if (Input.GetKey(KeyCode.R))
+        {
+            LemariBuka1.SetActive(true);
+            LemariTutup1.SetActive(false);
+        }
+
+
+        if (col.gameObject.name.Equals("TekaTeki") && !isSafeOpened)
         {
             codePanel.SetActive(true);
         }
