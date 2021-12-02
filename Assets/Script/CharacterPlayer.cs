@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class CharacterPlayer : MonoBehaviour
 {
+    //singleton
+    public static CharacterPlayer Instance { get; private set; }
+
     Rigidbody2D rb;
     Animator anim;
     float dirX, moveSpeed = 2f;
@@ -45,6 +48,18 @@ public class CharacterPlayer : MonoBehaviour
     GameObject codePanel, ClosedSafe, OpenedSafe, Key;
     public static bool isSafeOpened = false;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
