@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 176773668}
   - component: {fileID: 176773667}
   m_Layer: 0
-  m_Name: BEGO
+  m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2434,7 +2434,7 @@ GameObject:
   - component: {fileID: 1441900207}
   - component: {fileID: 1441900206}
   - component: {fileID: 1441900208}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Environment_OnColl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
