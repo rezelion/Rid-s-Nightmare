@@ -53,6 +53,10 @@ public class CharacterPlayer : MonoBehaviour
     [SerializeField]
     GameObject LemariTutup1, LemariBuka1, Textlemari;
 
+    [SerializeField]
+    GameObject Player, anak;
+    
+
     //Don't destroy On Load ()
     private void Awake()
     {
@@ -116,6 +120,9 @@ public class CharacterPlayer : MonoBehaviour
 
     void Update()
     {
+        
+        
+
         waktu();
         //sentermati();
         cutdown();
@@ -146,6 +153,8 @@ public class CharacterPlayer : MonoBehaviour
         }
 
     }
+
+  
     private void sentermati()
     {
        if(rb.velocity != Vector2.zero)
@@ -197,7 +206,9 @@ public class CharacterPlayer : MonoBehaviour
     void FixedUpdate()
     {
 
-       
+
+        
+
         if (!isDead)
             moveInput = Input.GetAxisRaw("Horizontal") * moveSpeed;
 
@@ -207,7 +218,10 @@ public class CharacterPlayer : MonoBehaviour
     }
      void LateUpdate()
     {
-        
+  
+       
+          
+
         CheckWhereToFace(); 
     }
     void SetAnimitionState()
@@ -268,15 +282,37 @@ public class CharacterPlayer : MonoBehaviour
         }
     }
 
-    
+    public void OpenLemari()
+    {
+        if (Input.GetKey(KeyCode.R))
+        {
+            LemariBuka1.SetActive(true);
+            LemariTutup1.SetActive(false);
+            Player.SetActive(false);
+            anak.SetActive(false);  
+        }
+        else
+            LemariBuka1.SetActive(false);
+        LemariTutup1.SetActive(true);
+        Player.SetActive(true);
+        anak.SetActive(true);
+    }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if( col.gameObject.name.Equals("Lemari"))
+        if (col.gameObject.name.Equals("Lemari") )
         {
+            
             Textlemari.SetActive(true);
+            LemariBuka1.SetActive(true);
+            LemariTutup1.SetActive(false);
+
+
+
         }
-      
-        if(col.gameObject.name.Equals("TekaTeki") && !isSafeOpened)
+        
+
+
+        if (col.gameObject.name.Equals("TekaTeki") && !isSafeOpened)
         {
             codePanel.SetActive(true);
         }
@@ -313,6 +349,8 @@ public class CharacterPlayer : MonoBehaviour
         if (collision.gameObject.name.Equals("Lemari"))
         {
             Textlemari.SetActive(false);
+            LemariBuka1.SetActive(false);
+            LemariTutup1.SetActive(true);
         }
     }
     private void mati()
