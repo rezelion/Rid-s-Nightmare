@@ -120,7 +120,7 @@ public class CharacterPlayer : MonoBehaviour
 
     void Update()
     {
-       
+        
         
 
         waktu();
@@ -291,6 +291,11 @@ public class CharacterPlayer : MonoBehaviour
             Player.SetActive(false);
             anak.SetActive(false);  
         }
+        else
+            LemariBuka1.SetActive(false);
+        LemariTutup1.SetActive(true);
+        Player.SetActive(true);
+        anak.SetActive(true);
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -298,17 +303,13 @@ public class CharacterPlayer : MonoBehaviour
         {
             
             Textlemari.SetActive(true);
-            OpenLemari();
-           
-
-
-
-        }
-         if (Input.GetKey(KeyCode.R))
-        {
             LemariBuka1.SetActive(true);
             LemariTutup1.SetActive(false);
+
+
+
         }
+        
 
 
         if (col.gameObject.name.Equals("TekaTeki") && !isSafeOpened)
@@ -348,6 +349,8 @@ public class CharacterPlayer : MonoBehaviour
         if (collision.gameObject.name.Equals("Lemari"))
         {
             Textlemari.SetActive(false);
+            LemariBuka1.SetActive(false);
+            LemariTutup1.SetActive(true);
         }
     }
     private void mati()
