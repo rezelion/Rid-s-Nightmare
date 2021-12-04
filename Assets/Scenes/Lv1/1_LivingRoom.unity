@@ -2377,7 +2377,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530344864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: -1.5, z: 0}
+  m_LocalPosition: {x: -1.53, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7391,18 +7391,8 @@ MonoBehaviour:
   diplayer1: {fileID: 2089945473}
   maxHealthSenter: 50
   SenterSlider: {fileID: 1263286048}
-  dieu: {fileID: 254313784}
   startingTime1: 120
   cutdown1: {fileID: 454926364}
-  codePanel: {fileID: 350793157}
-  ClosedSafe: {fileID: 1690100214}
-  OpenedSafe: {fileID: 975271232}
-  Key: {fileID: 349372118}
-  LemariTutup1: {fileID: 1690100214}
-  LemariBuka1: {fileID: 975271232}
-  Textlemari: {fileID: 349372118}
-  Player: {fileID: 0}
-  anak: {fileID: 0}
 --- !u!95 &1349919794
 Animator:
   serializedVersion: 3

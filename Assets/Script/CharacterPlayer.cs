@@ -11,7 +11,7 @@ public class CharacterPlayer : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
     float dirX, moveSpeed = 2f;
-    private float moveInput; 
+    private float moveInput;
     private float health = 0f;
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] private Slider healthSlider;
@@ -36,26 +36,23 @@ public class CharacterPlayer : MonoBehaviour
     // Cutdown waktu
     float currentTime = 0f;
     float startingTime = 1f;
-    [SerializeField] Text dieu;
+    
 
     // waktu game over
     float currentTime1 = 0f;
-   public float startingTime1 = 1f;
+    public float startingTime1 = 1f;
     [SerializeField] Text cutdown1;
 
     // Puzzel
-    [SerializeField]
-    GameObject codePanel, ClosedSafe, OpenedSafe, Key;
-    public static bool isSafeOpened = false;
+   
 
-    
+
     // Lemari
-    [SerializeField]
-    GameObject LemariTutup1, LemariBuka1, Textlemari;
+   // [SerializeField]
+   // GameObject LemariTutup1, LemariBuka1, Textlemari;
 
-    [SerializeField]
-    GameObject Player, anak;
-    
+   
+
 
     //Don't destroy On Load ()
     private void Awake()
@@ -77,16 +74,12 @@ public class CharacterPlayer : MonoBehaviour
     private void Start()
     {
         // Lemari
-        LemariBuka1.SetActive(false);
-        LemariTutup1.SetActive(true);
-        Textlemari.SetActive(false);
+       // LemariBuka1.SetActive(false);
+       // LemariTutup1.SetActive(true);
+       // Textlemari.SetActive(false);
 
         // Puzzel
-        codePanel.SetActive(false);
-        ClosedSafe.SetActive(true);
-        OpenedSafe.SetActive(false);
-        Key.SetActive(false);
-
+       
 
         currentTime1 = startingTime1;
         currentTime = startingTime;
@@ -120,8 +113,8 @@ public class CharacterPlayer : MonoBehaviour
 
     void Update()
     {
-        
-        
+
+
 
         waktu();
         //sentermati();
@@ -131,8 +124,8 @@ public class CharacterPlayer : MonoBehaviour
             tempPlayerJumps = playerJumps;
         }
         if (Input.GetKey(KeyCode.LeftShift))
-            moveSpeed = 4f ;
-        
+            moveSpeed = 4f;
+
         else moveSpeed = 2f;
         SetAnimitionState();
 
@@ -142,36 +135,30 @@ public class CharacterPlayer : MonoBehaviour
             tempPlayerJumps--;
         }
 
-        
+
         // Puzzel
-        if(isSafeOpened)
-        {
-            codePanel.SetActive(false);
-            ClosedSafe.SetActive(false);
-            OpenedSafe.SetActive(true);
-            Key.SetActive(true);
-        }
+       
 
     }
 
-  
+
     private void sentermati()
     {
-       if(rb.velocity != Vector2.zero)
+        if (rb.velocity != Vector2.zero)
         {
             healthSenter -= 10;
         }
-        
+
     }
 
     private void cutdown()
     {
-        currentTime -= 1 ;
+        currentTime -= 1;
         moveInput = Input.GetAxisRaw("Horizontal") * moveSpeed;
-        dieu.text = currentTime.ToString("0");
-        if (moveInput == 0 * Time.deltaTime  )
+       
+        if (moveInput == 0 * Time.deltaTime)
         {
-            
+
             currentTime = 1;
         }
         else
@@ -188,7 +175,7 @@ public class CharacterPlayer : MonoBehaviour
         }
     }
 
-    private void waktu ()
+    private void waktu()
     {
         currentTime1 -= 1 * Time.deltaTime;
         cutdown1.text = currentTime1.ToString("0");
@@ -198,16 +185,16 @@ public class CharacterPlayer : MonoBehaviour
             mati();
             moveInput = 0;
         }
-        
+
     }
-  
-   
+
+
 
     void FixedUpdate()
     {
 
 
-        
+
 
         if (!isDead)
             moveInput = Input.GetAxisRaw("Horizontal") * moveSpeed;
@@ -216,22 +203,22 @@ public class CharacterPlayer : MonoBehaviour
         if (!isHurt)
             rb.velocity = new Vector2(moveInput, rb.velocity.y);
     }
-     void LateUpdate()
+    void LateUpdate()
     {
-  
-       
-          
 
-        CheckWhereToFace(); 
+
+
+
+        CheckWhereToFace();
     }
     void SetAnimitionState()
     {
-        if(dirX == 0)
+        if (dirX == 0)
         {
             anim.SetBool("IsWalking", false);
             anim.SetBool("IsRunning", false);
         }
-        if(rb.velocity.y == 0)
+        if (rb.velocity.y == 0)
         {
             anim.SetBool("IsJumping", false);
             anim.SetBool("IsFalling", false);
@@ -246,15 +233,15 @@ public class CharacterPlayer : MonoBehaviour
             anim.SetBool("IsCrouch", true);
         else
             anim.SetBool("IsCrouch", false);
-            
+
         if (rb.velocity.y > 0)
             anim.SetBool("IsJumping", true);
 
         // Pas Jatuh
-       if(rb.velocity.y < 0)
-       {
+        if (rb.velocity.y < 0)
+        {
             anim.SetBool("IsJumping", false);
-            anim.SetBool("IsFalling", true); 
+            anim.SetBool("IsFalling", true);
         }
     }
     void CheckWhereToFace()
@@ -278,44 +265,19 @@ public class CharacterPlayer : MonoBehaviour
         {
             health = 0f;
             healthSlider.value = health;
-           // Destroy(gameObject);
+            // Destroy(gameObject);
         }
     }
 
-    public void OpenLemari()
-    {
-        if (Input.GetKey(KeyCode.R))
-        {
-            LemariBuka1.SetActive(true);
-            LemariTutup1.SetActive(false);
-            Player.SetActive(false);
-            anak.SetActive(false);  
-        }
-        else
-            LemariBuka1.SetActive(false);
-        LemariTutup1.SetActive(true);
-        Player.SetActive(true);
-        anak.SetActive(true);
-    }
+    
+
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.name.Equals("Lemari") )
-        {
-            
-            Textlemari.SetActive(true);
-            LemariBuka1.SetActive(true);
-            LemariTutup1.SetActive(false);
-
-
-
-        }
+        
         
 
 
-        if (col.gameObject.name.Equals("TekaTeki") && !isSafeOpened)
-        {
-            codePanel.SetActive(true);
-        }
+       
         if (col.gameObject.tag == "Hantu")
         {
             health -= 10;
@@ -340,19 +302,7 @@ public class CharacterPlayer : MonoBehaviour
             diplayer1.enabled = true;
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if(collision.gameObject.name.Equals("TekaTeki"))
-        {
-            codePanel.SetActive(false);
-        }
-        if (collision.gameObject.name.Equals("Lemari"))
-        {
-            Textlemari.SetActive(false);
-            LemariBuka1.SetActive(false);
-            LemariTutup1.SetActive(true);
-        }
-    }
+    
     private void mati()
     {
         dirX = 0;

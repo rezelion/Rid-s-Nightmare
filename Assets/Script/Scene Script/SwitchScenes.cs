@@ -10,8 +10,11 @@ public class SwitchScenes : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        
         if (collision.gameObject.CompareTag("Player") && !collision.isTrigger)
+
         {
+            Debug.Log("player nabrak pintu");
             if (Input.GetKeyDown("w"))
             {
                 LoadScene();

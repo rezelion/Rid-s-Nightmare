@@ -12,7 +12,7 @@ public class CodePanel : MonoBehaviour
         codeText.text = codeTextValue;
         if (codeTextValue == "1234")
         {
-            CharacterPlayer.isSafeOpened = true;
+            puzzel.isSafeOpened = true;
           
         }
             if (codeTextValue.Length >= 4)
