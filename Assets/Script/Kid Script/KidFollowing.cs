@@ -27,6 +27,9 @@ public class KidFollowing : MonoBehaviour
     [SerializeField]
     float moveSpeed;
 
+    [SerializeField]
+    BoxCollider2D colliderDepan;  
+
     Animator anim;
     public bool isGrouded;
     bool isHurt, isDead;
@@ -58,7 +61,7 @@ public class KidFollowing : MonoBehaviour
     {
         if (isFollowing)
         {
-            rb2d.velocity = new Vector2(rb2d.velocity.x, Jumpforce);
+            rb2d.velocity = new Vector2(moveSpeed + rb2d.velocity.x, Jumpforce);
         }
         
     } 
@@ -109,10 +112,12 @@ public class KidFollowing : MonoBehaviour
             }
         }
         GetComponent<SpriteRenderer>().flipX = (-transform.position.x > -player.position.x);
+        colliderDepan.offset = new Vector2((transform.position.x > player.position.x ? -1 : 1) * 7, colliderDepan.offset.y);
     }
     void StopChasingPlayer()
     {
         GetComponent<SpriteRenderer>().flipX = (transform.position.x > posisiAwalAnak.position.x);
+        colliderDepan.offset = new Vector2((transform.position.x > player.position.x ? -1 : 1) * 7, colliderDepan.offset.y);
         if (Vector2.Distance(transform.position, posisiAwalAnak.position) < 1f)
         {
             rb2d.velocity = Vector2.zero;
