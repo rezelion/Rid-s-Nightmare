@@ -4,22 +4,38 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Cutdown : MonoBehaviour
 {
-    float currentTime1;
-    public float startingTime1 = 10f;
-    [SerializeField] Text cutdownText;
+    Animator anim;
+    float currentTime1 = 0f;
+    public float startingTime1 = 1f;
+    [SerializeField] Text cutdown1;
+    bool  isDead;
     void Start()
     {
+        anim = GetComponent<Animator>();
         currentTime1 = startingTime1;
+    }
+    private void Update()
+    {
+        waktu();
     }
 
     // Update is called once per frame
-    void Update()
+    private void waktu()
     {
-        currentTime1 += 1 * Time.deltaTime;
-        cutdownText.text = currentTime1.ToString("0");
-        if(currentTime1 >= 0)
+        currentTime1 -= 1 * Time.deltaTime;
+        cutdown1.text = currentTime1.ToString("0");
+        if (currentTime1 <= 0)
         {
+            mati();
             currentTime1 = 0;
+           
         }
+
+    }
+    public void mati()
+    {
+       
+        isDead = true;
+        anim.SetTrigger("IsDead");
     }
 }

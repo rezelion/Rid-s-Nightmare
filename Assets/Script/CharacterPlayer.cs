@@ -39,9 +39,7 @@ public class CharacterPlayer : MonoBehaviour
     
 
     // waktu game over
-    float currentTime1 = 0f;
-    public float startingTime1 = 1f;
-    [SerializeField] Text cutdown1;
+    
 
     // Puzzel
    
@@ -81,7 +79,7 @@ public class CharacterPlayer : MonoBehaviour
         // Puzzel
        
 
-        currentTime1 = startingTime1;
+      
         currentTime = startingTime;
         health = maxHealth;
         healthSlider.maxValue = maxHealth;
@@ -114,9 +112,9 @@ public class CharacterPlayer : MonoBehaviour
     void Update()
     {
 
+       
 
-
-        waktu();
+    
         //sentermati();
         cutdown();
         if (isGrouded)
@@ -175,19 +173,8 @@ public class CharacterPlayer : MonoBehaviour
         }
     }
 
-    private void waktu()
-    {
-        currentTime1 -= 1 * Time.deltaTime;
-        cutdown1.text = currentTime1.ToString("0");
-        if (currentTime1 <= 0)
-        {
-            currentTime1 = 0;
-            mati();
-            moveInput = 0;
-        }
-
-    }
-
+   
+    
 
 
     void FixedUpdate()
@@ -303,7 +290,7 @@ public class CharacterPlayer : MonoBehaviour
         }
     }
     
-    private void mati()
+    public void mati()
     {
         dirX = 0;
         isDead = true;
