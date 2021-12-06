@@ -7,18 +7,27 @@ public class SwitchScenes : MonoBehaviour
     public string nameScenes;
 
     public bool useNoScenesToLoad;
+    private bool sceneIn;
+
+    private void Update()
+    {
+        if (sceneIn) {
+            if (Input.GetKeyDown("w"))
+            {
+                LoadScene();
+            }
+        
+        }
+
+        
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         
         if (collision.gameObject.CompareTag("Player") && !collision.isTrigger)
-
         {
-            Debug.Log("player nabrak pintu");
-            if (Input.GetKeyDown("w"))
-            {
-                LoadScene();
-            }
+            sceneIn = true;
         }
     }
 

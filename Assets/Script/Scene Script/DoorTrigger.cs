@@ -1,17 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DoorTrigger : MonoBehaviour
 {
     [SerializeField] private DoorController DoorEnabled;
-    bool playermasuk;
-
+    private bool playermasuk;
     private void Update()
     {
-        if(playermasuk)
+        if (playermasuk)
         {
-            Debug.Log("Player Pintu");
             if (Input.GetKeyDown("e"))
             {
                 DoorEnabled.OpenDoor();
@@ -22,21 +18,12 @@ public class DoorTrigger : MonoBehaviour
             }
         }
     }
-   
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerStay2D(Collider2D col)
     {
         if (col.gameObject.name.Equals("Player"))
         {
             playermasuk = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D col)
-    {
-        if (col.gameObject.name.Equals("Player"))
-        {
-            playermasuk = false;
         }
     }
 
