@@ -179,7 +179,7 @@ public class KidFollowing : MonoBehaviour
     {
         if (col.gameObject.tag == "Hantu")
         {
-            health -= 10;
+            health -= 1 ;
         }
 
         if (col.gameObject.tag == "Hantu" && health == 0)
