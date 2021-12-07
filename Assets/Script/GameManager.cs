@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    // Untuk Anak
     public int CollectedAnak, KondisiMenang = 2;
     private void Awake()
     {
