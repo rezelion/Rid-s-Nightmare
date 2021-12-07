@@ -32,7 +32,7 @@ public class KidFollowing : MonoBehaviour
 
     Animator anim;
     public bool isGrouded;
-    bool isHurt, isDead;
+    bool isHurt, isDead,Menang;
     private float moveInput;
     public Transform groundCheck;
     public LayerMask ground;
@@ -152,6 +152,11 @@ public class KidFollowing : MonoBehaviour
         isDead = true;
         anim.SetTrigger("IsDead");
     }
+    private void menang()
+    {
+        Menang = true;
+        anim.SetTrigger("Menang");
+    }
     public void UpdateHealth(float mod)
     {
         health += mod;
@@ -180,6 +185,10 @@ public class KidFollowing : MonoBehaviour
         if (col.gameObject.tag == "Hantu" && health == 0)
         {
             mati();
+        }
+        if(col.gameObject.tag == "Aman")
+        {
+            menang();
         }
     }
     
