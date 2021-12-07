@@ -150,7 +150,7 @@ public class KidFollowing : MonoBehaviour
     {
        
         isDead = true;
-        anim.SetTrigger("IsDead");
+        anim.SetTrigger("Mati");
     }
     private void menang()
     {
@@ -186,7 +186,7 @@ public class KidFollowing : MonoBehaviour
         {
             mati();
         }
-        if(col.gameObject.tag == "Aman")
+        if (col.gameObject.tag == "Aman")
         {
             menang();
         }
