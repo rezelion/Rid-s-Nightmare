@@ -492,6 +492,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Anak anak (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7876541938374226383, guid: 2b5fbb3002e6f17418793b6202106134,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7876541938374226376, guid: 2b5fbb3002e6f17418793b6202106134,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -555,7 +560,7 @@ PrefabInstance:
     - target: {fileID: 7876541938086921057, guid: 2b5fbb3002e6f17418793b6202106134,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b5fbb3002e6f17418793b6202106134, type: 3}
