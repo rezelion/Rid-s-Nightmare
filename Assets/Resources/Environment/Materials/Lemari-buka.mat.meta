@@ -1,8 +1,13 @@
 fileFormatVersion: 2
-guid: 3118bb93a5e0a6b41827fec8162338db
+<<<<<<< HEAD:Assets/Resources/Environment/Materials/Lemari-buka.mat.meta
+guid: b0ca5b25a0d0bec428eb1b70504d0b9b
 NativeFormatImporter:
+=======
+guid: c133ed9d70684d44da5e20e87deae806
+PrefabImporter:
+>>>>>>> e52271480a85868d21ecdabe9e015cb881b1630f:Assets/Resources/Prefabs/GameAnakManager.prefab.meta
   externalObjects: {}
-  mainObjectFileID: 0
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

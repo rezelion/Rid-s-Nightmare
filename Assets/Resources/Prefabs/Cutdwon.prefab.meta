@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes/Lv1/LV1_Alternatives.unity.meta
+guid: 9576cfd70828b9b4da0dad59ef17c71d
+DefaultImporter:
+=======
 guid: 596c0821367f27144bc294cf380430aa
 PrefabImporter:
+>>>>>>> e52271480a85868d21ecdabe9e015cb881b1630f:Assets/Resources/Prefabs/Cutdwon.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

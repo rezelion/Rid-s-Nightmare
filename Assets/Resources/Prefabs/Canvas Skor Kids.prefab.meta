@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Resources/Environment/Materials.meta
+guid: d92c0cd83340b3a40be4506596791b26
+folderAsset: yes
+DefaultImporter:
+=======
 guid: 8a397e44e91721a40b790f578233bf7a
 PrefabImporter:
+>>>>>>> e52271480a85868d21ecdabe9e015cb881b1630f:Assets/Resources/Prefabs/Canvas Skor Kids.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
