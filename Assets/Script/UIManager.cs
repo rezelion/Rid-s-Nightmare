@@ -36,7 +36,7 @@ public class UIManager : MonoBehaviour
     public void ShowKondisiMenang(int _Anak, int _MenangKondisi)
     {
         KondisiMenang.SetActive(true);
-        txtMenangCondisi.text = "Kamu Harus Mencari " + (_MenangKondisi - _Anak) + "Anak Lagi";
+        txtMenangCondisi.text = "Kamu Harus Mencari " + (_MenangKondisi - _Anak) + " Anak Lagi";
     }
 
     public void HideKondisiMenang()

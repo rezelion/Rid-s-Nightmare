@@ -16,7 +16,7 @@ public class CharacterPlayer : MonoBehaviour
     [SerializeField] private float maxHealth = 100f;
     [SerializeField] private Slider healthSlider;
     bool isHurt, isDead;
-    bool facingRight = true;
+    bool facingRight = false;
     Vector3 localScale;
     public Transform groundCheck;
     public LayerMask ground;
