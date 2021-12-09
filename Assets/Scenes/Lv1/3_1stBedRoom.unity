@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 336568376}
   - component: {fileID: 336568377}
+  - component: {fileID: 336568378}
   m_Layer: 8
   m_Name: Collider-Bed
   m_TagString: Untagged
@@ -143,8 +144,8 @@ Transform:
   m_Father: {fileID: 1012108403}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &336568377
-EdgeCollider2D:
+--- !u!61 &336568377
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -156,19 +157,45 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 30, y: -2.95}
+  m_Offset: {x: 29.92019, y: -3.5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.808094, y: 1}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: -2.9539642, y: -1.0470245}
-  - {x: -2.980976, y: -0.6068413}
-  - {x: -2.9994316, y: -0.18423438}
-  - {x: -2.8399277, y: 0.01563096}
-  - {x: 2.8496933, y: 0.011552811}
-  - {x: 2.8377533, y: 1.7315025}
-  - {x: 2.8413925, y: 1.9014916}
-  - {x: 2.9182777, y: 1.9566271}
-  - {x: 2.998314, y: 1.894603}
-  - {x: 3.001831, y: -1.042577}
+--- !u!61 &336568378
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336568375}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 32.918396, y: -2.509412}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.18395996, y: 2.977343}
+  m_EdgeRadius: 0
 --- !u!1 &388658035
 GameObject:
   m_ObjectHideFlags: 0
@@ -5167,7 +5194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2206312825242215773}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.32, y: -2.019, z: 0.20560032}
+  m_LocalPosition: {x: 31.79, y: -1.94, z: 0.20560032}
   m_LocalScale: {x: 0.14142752, y: 0.09261649, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
