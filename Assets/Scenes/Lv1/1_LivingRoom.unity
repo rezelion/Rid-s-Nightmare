@@ -6236,6 +6236,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0021172, y: 6.979754}
   m_EdgeRadius: 0
+--- !u!1 &1522453910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 138504036922823632, guid: dccaf5f214e64084d82731521485822d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2083555711}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1522453911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522453910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 647e27d057a61d540a540590acbcb586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1546840541
 GameObject:
   m_ObjectHideFlags: 0
@@ -6636,17 +6654,17 @@ PrefabInstance:
     - target: {fileID: 138504036922823637, guid: dccaf5f214e64084d82731521485822d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 138504036922823637, guid: dccaf5f214e64084d82731521485822d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 138504036922823637, guid: dccaf5f214e64084d82731521485822d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 138504036922823637, guid: dccaf5f214e64084d82731521485822d,
         type: 3}
@@ -6672,6 +6690,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 138504036922823637, guid: dccaf5f214e64084d82731521485822d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.058154535
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dccaf5f214e64084d82731521485822d, type: 3}
@@ -11339,7 +11362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollectedAnak: 0
-  KondisiMenang: 5
+  KondisiMenang: 3
 --- !u!1 &6795740347744268843
 GameObject:
   m_ObjectHideFlags: 0

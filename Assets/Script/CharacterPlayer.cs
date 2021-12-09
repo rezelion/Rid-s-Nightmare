@@ -279,6 +279,7 @@ public class CharacterPlayer : MonoBehaviour
         }
         if (col.gameObject.tag == "Hantu" && health == 0)
         {
+            Destroy(col.gameObject);
             mati();
         }
 
@@ -293,6 +294,7 @@ public class CharacterPlayer : MonoBehaviour
     
     public void mati()
     {
+       
         dirX = 0;
         isDead = true;
         anim.SetTrigger("IsDead");
