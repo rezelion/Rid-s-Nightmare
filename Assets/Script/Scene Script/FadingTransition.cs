@@ -10,7 +10,7 @@ public class FadingTransition : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && !collision.isTrigger)
+        if (collision.gameObject.CompareTag("Teleporter") && !collision.isTrigger)
         {
             if (Input.GetKeyDown("w"))
             {
