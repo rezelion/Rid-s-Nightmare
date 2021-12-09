@@ -273,7 +273,7 @@ public class CharacterPlayer : MonoBehaviour
         {
             
             anim.SetTrigger("IsHurt");
-            Debug.Log("WOI");
+          
             StartCoroutine("Hurt");
             
         }
@@ -284,7 +284,7 @@ public class CharacterPlayer : MonoBehaviour
 
         if (col.gameObject.CompareTag("Battery"))
         {
-            Destroy(col.gameObject);
+           
             healthSenter += 20;
             diplayer.enabled = true;
             diplayer1.enabled = true;
