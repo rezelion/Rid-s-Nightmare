@@ -2,25 +2,25 @@
 
 public class ObjectFollower : MonoBehaviour
 {
-    public static ObjectFollower Instance { get; private set; }
+    //public static ObjectFollower Instance { get; private set; }
     public Transform target;
     public Vector3 offset;
     //[Range(1, 10)]
     //public float smoothFactor;
     public Vector3 minVal, maxVal;
 
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    //private void Awake()
+    //{
+    //    if (Instance == null)
+    //    {
+    //        Instance = this;
+    //        DontDestroyOnLoad(gameObject);
+    //    }
+    //    else
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
     private void FixedUpdate()
     {
         //transform.position = target.position + offset;
