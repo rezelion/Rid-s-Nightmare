@@ -5,14 +5,15 @@ using UnityEngine;
 public class puzzel : MonoBehaviour
 {
     [SerializeField]
-    GameObject codePanel, ClosedSafe, OpenedSafe, Key;
+    GameObject codePanel, ClosedSafe, OpenedSafe, Kebuka;
     public static bool isSafeOpened = false;
     void Start()
     {
         codePanel.SetActive(false);
         ClosedSafe.SetActive(true);
         OpenedSafe.SetActive(false);
-        Key.SetActive(false);
+        Kebuka.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -24,7 +25,8 @@ public class puzzel : MonoBehaviour
             codePanel.SetActive(false);
             ClosedSafe.SetActive(false);
             OpenedSafe.SetActive(true);
-            Key.SetActive(true);
+            Kebuka.SetActive(true);
+
         }
     }
     private void OnTriggerEnter2D(Collider2D col)

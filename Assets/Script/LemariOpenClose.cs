@@ -5,12 +5,13 @@ using UnityEngine;
 public class LemariOpenClose : MonoBehaviour
 {
     [SerializeField]
-    GameObject LemariTutup1, LemariBuka1;
+    GameObject LemariTutup1, LemariBuka1, Anak;
 
     void Start()
     {
         // Lemari
         LemariBuka1.SetActive(false);
+        //Anak.SetActive(false);
         LemariTutup1.SetActive(true);
        // Textlemari.SetActive(false);
     }
@@ -41,6 +42,10 @@ public class LemariOpenClose : MonoBehaviour
             //Textlemari.SetActive(true);
             LemariBuka1.SetActive(true);
             LemariTutup1.SetActive(false);
+            //if (col.gameObject.CompareTag("Kid"))
+            //{
+            //    Destroy(col.gameObject);
+            //}
 
 
 
@@ -54,6 +59,11 @@ public class LemariOpenClose : MonoBehaviour
           
             LemariBuka1.SetActive(false);
             LemariTutup1.SetActive(true);
+            //if(collision.gameObject.CompareTag("Kid"))
+            //{
+            //    Destroy(collision.gameObject);
+            //}
+            
         }
     }
 }

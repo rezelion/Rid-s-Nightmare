@@ -10,7 +10,7 @@ public class CodePanel : MonoBehaviour
     void Update()
     {
         codeText.text = codeTextValue;
-        if (codeTextValue == "1234")
+        if (codeTextValue == "2357")
         {
             puzzel.isSafeOpened = true;
           
