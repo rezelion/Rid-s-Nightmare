@@ -24,6 +24,5 @@ public class Anak2 : Collecteble
     {
         GameManager.Myinstance.AddAnak(AnakValue);
         gameObject.SetActive(false);
-        gameObject.GetComponent<CapsuleCollider>().enabled = false;
     }
 }

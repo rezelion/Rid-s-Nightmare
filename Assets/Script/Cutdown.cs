@@ -34,8 +34,13 @@ public class Cutdown : MonoBehaviour
     }
     public void mati()
     {
-       
-        isDead = true;
+
+        //foreach (GameObject o in Object.FindObjectsOfType<GameObject>())
+        //{
+        //    Destroy(o);
+        //}
+
+            isDead = true;
         anim.SetTrigger("IsDead");
     }
 }

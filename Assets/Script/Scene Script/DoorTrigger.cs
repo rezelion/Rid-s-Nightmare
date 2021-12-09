@@ -29,13 +29,20 @@ public class DoorTrigger : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (col.gameObject.name.Equals("Player"))
+        if (collision.gameObject.name.Equals("Player"))
         {
             playermasuk = true;
-            
+
         }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name.Equals("Player"))
+        {
+            playermasuk = false;
 
+        }
+    }
 }

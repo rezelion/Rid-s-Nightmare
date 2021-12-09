@@ -6,7 +6,7 @@ public class SwitchScenes : MonoBehaviour
     public int noScenes;
     public string nameScenes;
 
-    public bool useNoScenesToLoad;
+    public bool useNoScenesToLoad = true;
     private bool sceneIn;
 
     private void Update()
@@ -22,12 +22,19 @@ public class SwitchScenes : MonoBehaviour
         
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
         if (collision.gameObject.CompareTag("Player") && !collision.isTrigger)
         {
             sceneIn = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player") && !collision.isTrigger)
+        {
+            sceneIn = false;
         }
     }
 
