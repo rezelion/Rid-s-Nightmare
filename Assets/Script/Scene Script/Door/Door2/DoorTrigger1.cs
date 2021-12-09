@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class DoorTrigger : MonoBehaviour
+public class DoorTrigger1 : MonoBehaviour
 {
     [SerializeField] private DoorController DoorEnabled;
     public int doorNum;

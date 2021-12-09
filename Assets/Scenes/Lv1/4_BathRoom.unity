@@ -3292,8 +3292,8 @@ GameObject:
   m_Component:
   - component: {fileID: 880001207}
   - component: {fileID: 880001206}
-  - component: {fileID: 880001205}
   - component: {fileID: 880001204}
+  - component: {fileID: 880001205}
   m_Layer: 0
   m_Name: Anak-Anak
   m_TagString: Untagged
@@ -3326,7 +3326,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 880001203}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c594a11f55598a7419905cb6bbcc309e, type: 3}
+  m_Script: {fileID: 11500000, guid: c7cb3ee2060b9354c8614aad4abb8435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   AnakValue: 1

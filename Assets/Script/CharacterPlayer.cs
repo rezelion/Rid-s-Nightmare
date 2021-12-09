@@ -35,7 +35,7 @@ public class CharacterPlayer : MonoBehaviour
 
     // Cutdown waktu
     float currentTime = 0f;
-    float startingTime = 1f;
+    float startingTime = 2f;
     
 
     // waktu game over

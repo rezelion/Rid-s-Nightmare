@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
         if(CollectedAnak >= KondisiMenang)
         {
             SceneManager.LoadScene("MainMenu");
+            Destroy(gameObject);
         }
         else
         {
