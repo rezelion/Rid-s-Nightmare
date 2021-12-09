@@ -273,6 +273,7 @@ public class CharacterPlayer : MonoBehaviour
         {
             
             anim.SetTrigger("IsHurt");
+            Debug.Log("WOI");
             StartCoroutine("Hurt");
             
         }
