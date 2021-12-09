@@ -260,11 +260,7 @@ public class CharacterPlayer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        
-        
-
-
-       
+    
         if (col.gameObject.tag == "Hantu")
         {
             health -= 10;
@@ -279,13 +275,13 @@ public class CharacterPlayer : MonoBehaviour
         }
         if (col.gameObject.tag == "Hantu" && health == 0)
         {
-            Destroy(col.gameObject);
+            
             mati();
         }
 
         if (col.gameObject.CompareTag("Battery"))
         {
-           
+            Destroy(col.gameObject);
             healthSenter += 20;
             diplayer.enabled = true;
             diplayer1.enabled = true;
@@ -298,6 +294,13 @@ public class CharacterPlayer : MonoBehaviour
         dirX = 0;
         isDead = true;
         anim.SetTrigger("IsDead");
+    }
+
+    public void woi()
+    {
+        dirX = 0;
+        isDead = false;
+        
     }
     private void OnGUI()
     {
