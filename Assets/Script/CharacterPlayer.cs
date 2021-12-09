@@ -53,18 +53,18 @@ public class CharacterPlayer : MonoBehaviour
 
 
     //Don't destroy On Load ()
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    //private void Awake()
+    //{
+    //    if (Instance == null)
+    //    {
+    //        Instance = this;
+    //        DontDestroyOnLoad(gameObject);
+    //    }
+    //    else
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
 
 
 
@@ -281,7 +281,7 @@ public class CharacterPlayer : MonoBehaviour
 
         if (col.gameObject.CompareTag("Battery"))
         {
-            Destroy(col.gameObject);
+             Destroy(col.gameObject);
             healthSenter += 20;
             diplayer.enabled = true;
             diplayer1.enabled = true;
