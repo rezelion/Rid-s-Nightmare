@@ -232,7 +232,7 @@ PrefabInstance:
     - target: {fileID: 1588509540979152450, guid: 3651b6aface410149b0e03a46ffe1c1c,
         type: 3}
       propertyPath: startingTime1
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 1588509539378201498, guid: 3651b6aface410149b0e03a46ffe1c1c,
         type: 3}
@@ -20320,8 +20320,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.33120856, y: -11.437665}
-  m_Size: {x: 9.7993355, y: 21.545233}
+  m_Offset: {x: -0.075032696, y: -11.437665}
+  m_Size: {x: 7.237567, y: 21.545233}
   m_Direction: 0
 --- !u!95 &1041497317
 Animator:

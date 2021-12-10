@@ -112,7 +112,10 @@ public class CharacterPlayer : MonoBehaviour
     void Update()
     {
 
-       
+       if(health == 0)
+        {
+            mati();
+        }
 
     
         //sentermati();
@@ -315,7 +318,7 @@ public class CharacterPlayer : MonoBehaviour
         isHurt = true;
         rb.velocity = Vector2.zero;
         if (facingRight)
-            rb.AddForce(new Vector2(-200f, 200f));
+            rb.AddForce(new Vector2(-500f, 500f));
         else
             rb.AddForce(new Vector2(200F, 200F));
         yield return new WaitForSeconds(0.5f);
