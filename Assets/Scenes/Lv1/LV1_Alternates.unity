@@ -314,7 +314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 21636628}
   - component: {fileID: 21636627}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2nd_Bed_Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 34234124}
   - component: {fileID: 34234125}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bg-dapurr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -581,7 +581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 68424096}
   - component: {fileID: 68424095}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1st_Bed_Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -630,7 +630,7 @@ GameObject:
   - component: {fileID: 70047938}
   - component: {fileID: 70047937}
   - component: {fileID: 70047936}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Middleground-OnColl-MR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1911,7 +1911,7 @@ GameObject:
   - component: {fileID: 84559568}
   - component: {fileID: 84559570}
   - component: {fileID: 84559569}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Middleground_K
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2825,7 +2825,7 @@ GameObject:
   m_Component:
   - component: {fileID: 93794493}
   - component: {fileID: 93794492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Kitchen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2941,7 +2941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 120963287}
   - component: {fileID: 120963288}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG-BathRoom (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3022,7 +3022,7 @@ GameObject:
   - component: {fileID: 127509897}
   - component: {fileID: 127509896}
   - component: {fileID: 127509895}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Environment-OnColl-LR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3101,7 +3101,7 @@ TilemapRenderer:
   m_SortOrder: 0
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
 --- !u!1839735485 &127509897
 Tilemap:
   m_ObjectHideFlags: 0
@@ -3232,7 +3232,7 @@ GameObject:
   - component: {fileID: 143468181}
   - component: {fileID: 143468180}
   - component: {fileID: 143468179}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Middleground-OnColl_K
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4473,7 +4473,7 @@ GameObject:
   - component: {fileID: 155162099}
   - component: {fileID: 155162101}
   - component: {fileID: 155162100}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Environment-LR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4538,7 +4538,7 @@ TilemapRenderer:
   m_SortOrder: 0
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
 --- !u!1839735485 &155162101
 Tilemap:
   m_ObjectHideFlags: 0
@@ -6871,7 +6871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 309479669}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7068,7 +7068,7 @@ GameObject:
   m_Component:
   - component: {fileID: 314724918}
   - component: {fileID: 314724919}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG-BathRoom (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7343,7 +7343,7 @@ GameObject:
   - component: {fileID: 331497249}
   - component: {fileID: 331497251}
   - component: {fileID: 331497250}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Environment-OnColl_K
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7527,7 +7527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 353661566}
   - component: {fileID: 353661567}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Top-Coll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7774,7 +7774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 393838489}
   - component: {fileID: 393838490}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left-Coll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8043,7 +8043,7 @@ GameObject:
   - component: {fileID: 424823997}
   - component: {fileID: 424823999}
   - component: {fileID: 424823998}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Environment_BR2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9376,7 +9376,7 @@ GameObject:
   - component: {fileID: 488574310}
   - component: {fileID: 488574312}
   - component: {fileID: 488574311}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Middleground_BR1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10672,7 +10672,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.038721
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -11006,7 +11006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 548231264}
   - component: {fileID: 548231265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right-Coll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11142,7 +11142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 569931699}
   - component: {fileID: 569931700}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG-BathRoom (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11274,18 +11274,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   healthSlider: {fileID: 1178894757}
-  groundCheck: {fileID: 1083395919}
-  ground:
-    serializedVersion: 2
-    m_Bits: 256
-  groundCheckRadius: 2.5
-  isGrouded: 0
   playerJumps: 1
-  Jumpforce: 6
   diplayer: {fileID: 157979733}
   diplayer1: {fileID: 157979730}
   maxHealthSenter: 100
   SenterSlider: {fileID: 1336466005}
+  jumpForce: 17
+  feetpos: {fileID: 1083395919}
+  checkRadius: 0.3
+  WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
+  jumpTime: 0.35
+  isJumping: 0
 --- !u!95 &583495448
 Animator:
   serializedVersion: 3
@@ -11320,7 +11321,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -11382,8 +11383,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583495445}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.8199997, y: -1.3999999, z: 0}
-  m_LocalScale: {x: -0.1905913, y: 0.15416569, z: 1.4704493}
+  m_LocalPosition: {x: -6.35, y: -2.07, z: 0}
+  m_LocalScale: {x: -0.13381357, y: 0.11923775, z: 1.4704493}
   m_Children:
   - {fileID: 1083395919}
   - {fileID: 157979732}
@@ -11414,7 +11415,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 583495445}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f9f95a2a226c7cd48823f2cb1358a1c5, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -12749,7 +12750,7 @@ GameObject:
   - component: {fileID: 600459597}
   - component: {fileID: 600459599}
   - component: {fileID: 600459598}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Middleground-MR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13238,7 +13239,7 @@ GameObject:
   - component: {fileID: 602122781}
   - component: {fileID: 602122783}
   - component: {fileID: 602122782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Environment_BR1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16501,7 +16502,7 @@ GameObject:
   m_Component:
   - component: {fileID: 815512248}
   - component: {fileID: 815512247}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Living_Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16739,7 +16740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 860194247}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GridSet_LV1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17452,7 +17453,7 @@ TilemapRenderer:
   m_SortOrder: 0
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
 --- !u!1839735485 &954481408
 Tilemap:
   m_ObjectHideFlags: 0
@@ -18767,7 +18768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 964562052}
   - component: {fileID: 964562053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right-Coll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18824,7 +18825,7 @@ GameObject:
   m_Component:
   - component: {fileID: 981474174}
   - component: {fileID: 981474175}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Top1-Coll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18893,7 +18894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 987575264}
   - component: {fileID: 987575265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19594,7 +19595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1010103000}
   - component: {fileID: 1010102999}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Middle_Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19698,7 +19699,7 @@ GameObject:
   - component: {fileID: 1025115289}
   - component: {fileID: 1025115291}
   - component: {fileID: 1025115290}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Environment_BR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20463,8 +20464,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041497312}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.251, y: 1.036, z: 0.0006265107}
-  m_LocalScale: {x: 0.19670177, y: 0.12647726, z: 0.120053336}
+  m_LocalPosition: {x: -1.108, y: 0.466, z: 0.0006265107}
+  m_LocalScale: {x: 0.15264058, y: 0.08815465, z: 0.120053336}
   m_Children: []
   m_Father: {fileID: 1852088379}
   m_RootOrder: 0
@@ -20837,9 +20838,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1083395919}
   m_Layer: 0
-  m_Name: GroundCek
+  m_Name: feetpos
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -20851,7 +20852,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083395918}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.058, y: -0.265, z: 0}
+  m_LocalPosition: {x: 1.9, y: -12.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 583495451}
@@ -21037,12 +21038,12 @@ PrefabInstance:
     - target: {fileID: 1103293537201671680, guid: 1bd05837763886e468810a712b0c85a9,
         type: 3}
       propertyPath: m_Offset.x
-      value: 6.6383853
+      value: 6.9572625
       objectReference: {fileID: 0}
     - target: {fileID: 1103293537201671680, guid: 1bd05837763886e468810a712b0c85a9,
         type: 3}
       propertyPath: m_Size.x
-      value: 2.7532244
+      value: 2.11547
       objectReference: {fileID: 0}
     - target: {fileID: 1103293537201671680, guid: 1bd05837763886e468810a712b0c85a9,
         type: 3}
@@ -21568,7 +21569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1165865864}
   - component: {fileID: 1165865865}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG-BathRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21735,7 +21736,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1198222788}
   - component: {fileID: 1198222789}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG-BathRoom (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22097,7 +22098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1283907224}
   - component: {fileID: 1283907225}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22617,7 +22618,7 @@ GameObject:
   - component: {fileID: 1339231532}
   - component: {fileID: 1339231534}
   - component: {fileID: 1339231533}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Environment_K
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24604,7 +24605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1380812365}
   - component: {fileID: 1380812364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BathRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25670,7 +25671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1492786711}
   - component: {fileID: 1492786712}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG-BathRoom (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25820,7 +25821,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1548850264}
   - component: {fileID: 1548850265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Top-Coll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26456,7 +26457,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1627495403}
   - component: {fileID: 1627495404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26535,7 +26536,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1641492097}
   - component: {fileID: 1641492098}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27212,7 +27213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1743706838}
   - component: {fileID: 1743706839}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left-Coll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27349,7 +27350,7 @@ GameObject:
   - component: {fileID: 1768077228}
   - component: {fileID: 1768077230}
   - component: {fileID: 1768077229}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnvironmentExt_BR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27561,7 +27562,7 @@ GameObject:
   - component: {fileID: 1768629027}
   - component: {fileID: 1768629029}
   - component: {fileID: 1768629028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Middleground-LR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27626,7 +27627,7 @@ TilemapRenderer:
   m_SortOrder: 0
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
 --- !u!1839735485 &1768629029
 Tilemap:
   m_ObjectHideFlags: 0
@@ -29132,7 +29133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1860419097}
   - component: {fileID: 1860419098}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29637,7 +29638,7 @@ GameObject:
   - component: {fileID: 1937665236}
   - component: {fileID: 1937665238}
   - component: {fileID: 1937665237}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Middleground_BR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30235,7 +30236,7 @@ GameObject:
   - component: {fileID: 1956299423}
   - component: {fileID: 1956299425}
   - component: {fileID: 1956299424}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Environment-MR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31463,7 +31464,7 @@ GameObject:
   - component: {fileID: 1958874860}
   - component: {fileID: 1958874859}
   - component: {fileID: 1958874858}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Environment-OnColl_BR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32811,7 +32812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2053412657}
   - component: {fileID: 2053412658}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG-BathRoom (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33073,7 +33074,7 @@ GameObject:
   - component: {fileID: 2080196094}
   - component: {fileID: 2080196096}
   - component: {fileID: 2080196095}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Middleground_BR2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34392,7 +34393,7 @@ GameObject:
   - component: {fileID: 2097633076}
   - component: {fileID: 2097633075}
   - component: {fileID: 2097633074}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Middleground_OnColl_BR2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35348,7 +35349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2115481824}
   - component: {fileID: 2115481825}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG-BathRoom (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

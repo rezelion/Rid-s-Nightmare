@@ -18,14 +18,13 @@ public class CharacterPlayer : MonoBehaviour
     bool isHurt, isDead;
     bool facingRight = false;
     Vector3 localScale;
-    public Transform groundCheck;
-    public LayerMask ground;
-    public float groundCheckRadius;
-    public bool isGrouded;
-    public int playerJumps;
-    public float Jumpforce;
-    private int tempPlayerJumps;
-
+    //public Transform groundCheck;
+    //public LayerMask ground;
+    //public float groundCheckRadius;
+    //public bool isGrouded;
+    //public int playerJumps;
+    //public float Jumpforce;
+    //private int tempPlayerJumps;
     // Senter 
     public SpriteRenderer diplayer;
     public SpriteMask diplayer1;
@@ -36,50 +35,24 @@ public class CharacterPlayer : MonoBehaviour
     // Cutdown waktu
     float currentTime = 0f;
     float startingTime = 2f;
-    
 
-    // waktu game over
-    
-
-    // Puzzel
-   
-
-
-    // Lemari
-   // [SerializeField]
-   // GameObject LemariTutup1, LemariBuka1, Textlemari;
-
-   
+    // double jump
+    public float jumpForce;
+    private bool isGrouded;
+    public Transform feetpos;
+    public float checkRadius;
+    public LayerMask WhatIsGround;
+    private float jumpTimeCounter;
+    public float jumpTime;
+    public bool isJumping;
 
 
-    //Don't destroy On Load ()
-    //private void Awake()
-    //{
-    //    if (Instance == null)
-    //    {
-    //        Instance = this;
-    //        DontDestroyOnLoad(gameObject);
-    //    }
-    //    else
-    //    {
-    //        Destroy(gameObject);
-    //    }
-    //}
 
 
 
 
     private void Start()
     {
-        // Lemari
-       // LemariBuka1.SetActive(false);
-       // LemariTutup1.SetActive(true);
-       // Textlemari.SetActive(false);
-
-        // Puzzel
-       
-
-      
         currentTime = startingTime;
         health = maxHealth;
         healthSlider.maxValue = maxHealth;
@@ -117,29 +90,51 @@ public class CharacterPlayer : MonoBehaviour
             mati();
         }
 
-    
-        //sentermati();
-        cutdown();
-        if (isGrouded)
+        isGrouded = Physics2D.OverlapCircle(feetpos.position, checkRadius, WhatIsGround);
+        if(isGrouded == true && Input.GetKeyDown(KeyCode.Space))
         {
-            tempPlayerJumps = playerJumps;
+           
+            jumpTimeCounter = jumpTime;
+            rb.velocity = Vector2.up * jumpForce;
         }
+        if(Input.GetKey(KeyCode.Space) && isJumping == true)
+        {
+            if(jumpTimeCounter > 0)
+            {
+                rb.velocity = Vector2.up * jumpForce;
+                jumpTimeCounter -= Time.deltaTime;
+            }
+         
+          
+        }
+     
+       
+        cutdown();
+    
         if (Input.GetKey(KeyCode.LeftShift))
-            moveSpeed = 4f;
+            moveSpeed = 10f;
 
-        else moveSpeed = 2f;
+        else moveSpeed = 5f;
         SetAnimitionState();
 
-        if (Input.GetKeyDown(KeyCode.Space) && tempPlayerJumps > 0)
-        {
-            rb.velocity = Vector2.up * Jumpforce;
-            tempPlayerJumps--;
-        }
+
 
 
         // Puzzel
-       
 
+        // Komen
+        //if (isGrouded)
+        //{
+        //    tempPlayerJumps = playerJumps;
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.Space) && tempPlayerJumps > 0)
+        //{
+        //    rb.velocity = Vector2.up * Jumpforce;
+        //    tempPlayerJumps--;
+        //}
+
+        //sentermati();
     }
 
 
@@ -187,11 +182,17 @@ public class CharacterPlayer : MonoBehaviour
 
 
         if (!isDead)
+        {
             moveInput = Input.GetAxisRaw("Horizontal") * moveSpeed;
+        }
+           
 
-        isGrouded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
+        //isGrouded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
         if (!isHurt)
+        {
             rb.velocity = new Vector2(moveInput, rb.velocity.y);
+        }
+            
     }
     void LateUpdate()
     {
@@ -213,9 +214,9 @@ public class CharacterPlayer : MonoBehaviour
             anim.SetBool("IsJumping", false);
             anim.SetBool("IsFalling", false);
         }
-        if (Mathf.Abs(moveInput) == 2 && rb.velocity.y == 0)
+        if (Mathf.Abs(moveInput) == 5 && rb.velocity.y == 0)
             anim.SetBool("IsWalking", true);
-        if (Mathf.Abs(moveInput) == 4 && rb.velocity.y == 0)
+        if (Mathf.Abs(moveInput) == 10 && rb.velocity.y == 0)
             anim.SetBool("IsRunning", true);
         else
             anim.SetBool("IsRunning", false);
