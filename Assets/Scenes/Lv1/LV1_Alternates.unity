@@ -390,6 +390,21 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1588509539378201499, guid: 3651b6aface410149b0e03a46ffe1c1c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -559.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1588509539378201499, guid: 3651b6aface410149b0e03a46ffe1c1c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 359.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 1588509539378201499, guid: 3651b6aface410149b0e03a46ffe1c1c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1039.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1588509541479512830, guid: 3651b6aface410149b0e03a46ffe1c1c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -419,6 +434,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 96.14498
+      objectReference: {fileID: 0}
+    - target: {fileID: 1588509539994881451, guid: 3651b6aface410149b0e03a46ffe1c1c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1588509540979152460, guid: 3651b6aface410149b0e03a46ffe1c1c,
         type: 3}
@@ -21167,8 +21187,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1746049, y: -11.437665}
-  m_Size: {x: 2.9101439, y: 21.545233}
+  m_Offset: {x: 0.1746049, y: -5.6100955}
+  m_Size: {x: 2.9101439, y: 33.200367}
   m_Direction: 0
 --- !u!95 &1041497317
 Animator:
@@ -30689,8 +30709,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.0000305, y: -15.000061}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 14.0000305, y: -24.8}
+  m_SizeDelta: {x: 100, y: 80.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1917163393
 GameObject:
@@ -32761,7 +32781,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.699987, y: 15.599983}
+  m_AnchoredPosition: {x: -14.4, y: 30}
   m_SizeDelta: {x: 1021.9, y: 765.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1958840945
@@ -33416,7 +33436,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 132, y: 183}
+  m_AnchoredPosition: {x: 134.25, y: 172.94995}
   m_SizeDelta: {x: 645.2, y: 209.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1974147920
@@ -33441,10 +33461,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 228425e7445903546af2e8ed12775790, type: 3}
-    m_FontSize: 84
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 6
     m_MaxSize: 84
     m_Alignment: 0
     m_AlignByGeometry: 0
