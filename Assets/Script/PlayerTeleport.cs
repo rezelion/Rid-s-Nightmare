@@ -1,10 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerTeleport : MonoBehaviour
 {
     private GameObject currentTeleport;
+    [SerializeField] GameObject woi;
+
+    private void Start()
+    {
+        woi.SetActive(false);
+    }
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.W))
@@ -19,6 +25,7 @@ public class PlayerTeleport : MonoBehaviour
     {
         if(collision.CompareTag("Teleporter"))
         {
+            woi.SetActive(true);
             currentTeleport = collision.gameObject;
         }
     }
@@ -28,6 +35,7 @@ public class PlayerTeleport : MonoBehaviour
         {
             if(collision.gameObject == currentTeleport)
             {
+                woi.SetActive(false);
                 currentTeleport = null;
             }
              
