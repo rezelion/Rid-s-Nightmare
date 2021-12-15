@@ -17,6 +17,7 @@ public class CharacterPlayer : MonoBehaviour
     [SerializeField] private Slider healthSlider;
     bool isHurt, isDead;
     bool facingRight = false;
+    bool kiri = true;
     Vector3 localScale;
     //public Transform groundCheck;
     //public LayerMask ground;
@@ -182,16 +183,16 @@ public class CharacterPlayer : MonoBehaviour
 
 
         if (!isDead)
-        {
+        
             moveInput = Input.GetAxisRaw("Horizontal") * moveSpeed;
-        }
+        
            
 
         //isGrouded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
         if (!isHurt)
-        {
+        
             rb.velocity = new Vector2(moveInput, rb.velocity.y);
-        }
+        
             
     }
     void LateUpdate()
@@ -240,7 +241,7 @@ public class CharacterPlayer : MonoBehaviour
         if (moveInput > 0)
             facingRight = false;
         else if (moveInput < 0)
-            facingRight = true;
+            facingRight = true; 
         if (((facingRight) && (localScale.x < 0)) || ((!facingRight) && (localScale.x > 0)))
             localScale.x *= -1;
         transform.localScale = localScale;
@@ -275,6 +276,7 @@ public class CharacterPlayer : MonoBehaviour
             anim.SetTrigger("IsHurt");
           
             StartCoroutine("Hurt");
+            
             
         }
         if (col.gameObject.tag == "Hantu" && health == 0)
@@ -318,10 +320,16 @@ public class CharacterPlayer : MonoBehaviour
     {
         isHurt = true;
         rb.velocity = Vector2.zero;
-        if (facingRight)
-            rb.AddForce(new Vector2(-500f, 500f));
+       
+        if (kiri)
+
+            rb.AddForce(new Vector2(-400f, 400f) );
+
+
         else
-            rb.AddForce(new Vector2(200F, 200F));
+           
+            rb.AddForce(new Vector2(200f, 200f));
+       
         yield return new WaitForSeconds(0.5f);
         isHurt = false;
     }
