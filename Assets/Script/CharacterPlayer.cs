@@ -92,9 +92,17 @@ public class CharacterPlayer : MonoBehaviour
         }
 
         isGrouded = Physics2D.OverlapCircle(feetpos.position, checkRadius, WhatIsGround);
+        //if(moveInput > 0)
+        //{
+        //    transform.eulerAngles = new Vector3(0, 0, 0);
+
+        //}else if(moveInput < 0)
+        //{
+        //    transform.eulerAngles = new Vector3(0, 180, 0);
+        //}
         if(isGrouded == true && Input.GetKeyDown(KeyCode.Space))
         {
-           
+          
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
         }
@@ -104,7 +112,7 @@ public class CharacterPlayer : MonoBehaviour
             {
                 rb.velocity = Vector2.up * jumpForce;
                 jumpTimeCounter -= Time.deltaTime;
-            }
+            } 
          
           
         }
@@ -115,7 +123,7 @@ public class CharacterPlayer : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
             moveSpeed = 10f;
 
-        else moveSpeed = 5f;
+        else moveSpeed = 8f;
         SetAnimitionState();
 
 
@@ -215,9 +223,9 @@ public class CharacterPlayer : MonoBehaviour
             anim.SetBool("IsJumping", false);
             anim.SetBool("IsFalling", false);
         }
-        if (Mathf.Abs(moveInput) == 5 && rb.velocity.y == 0)
+        if (Mathf.Abs(moveInput) == 8 && rb.velocity.y == 0)
             anim.SetBool("IsWalking", true);
-        if (Mathf.Abs(moveInput) == 10 && rb.velocity.y == 0)
+        if (Mathf.Abs(moveInput) == 11 && rb.velocity.y == 0)
             anim.SetBool("IsRunning", true);
         else
             anim.SetBool("IsRunning", false);

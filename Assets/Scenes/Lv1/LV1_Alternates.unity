@@ -11876,7 +11876,7 @@ MonoBehaviour:
   diplayer1: {fileID: 157979730}
   maxHealthSenter: 100
   SenterSlider: {fileID: 1336466005}
-  jumpForce: 17
+  jumpForce: 15
   feetpos: {fileID: 1083395919}
   checkRadius: 0.3
   WhatIsGround:
