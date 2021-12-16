@@ -3176,8 +3176,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.8000183, y: 2.2000122}
-  m_SizeDelta: {x: 206.7, y: 106}
+  m_AnchoredPosition: {x: 29, y: 56.4}
+  m_SizeDelta: {x: 174.4, y: 112.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &95955469
 MonoBehaviour:
@@ -3605,8 +3605,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0.758, y: -181.213, z: -0.016}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -143, y: 4}
-  m_SizeDelta: {x: 69.9, y: 65.6}
+  m_AnchoredPosition: {x: -139.3, y: 5.3}
+  m_SizeDelta: {x: 59.44, y: 57.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &137259158
 MonoBehaviour:
@@ -3704,7 +3704,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 228425e7445903546af2e8ed12775790, type: 3}
-    m_FontSize: 46
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 5
@@ -6328,7 +6328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -24.5, y: -69}
+  m_AnchoredPosition: {x: -33.5, y: -74}
   m_SizeDelta: {x: 1073, y: 223.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &173937547
@@ -6428,7 +6428,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -7787,7 +7787,7 @@ MonoBehaviour:
   attackDamage: 10
   attackSpeed: 1
   maxHealth: 0
-  kecepatanGerak: 3
+  kecepatanGerak: 2
   berbalik: 1
 --- !u!70 &318855031
 CapsuleCollider2D:
@@ -11876,7 +11876,7 @@ MonoBehaviour:
   diplayer1: {fileID: 157979730}
   maxHealthSenter: 100
   SenterSlider: {fileID: 1336466005}
-  jumpForce: 15
+  jumpForce: 17
   feetpos: {fileID: 1083395919}
   checkRadius: 0.3
   WhatIsGround:
@@ -12134,7 +12134,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -307, y: -359}
+  m_AnchoredPosition: {x: -316, y: -364}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &584286418
@@ -12185,8 +12185,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 34.3
+  m_fontSizeBase: 34.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -21156,7 +21156,7 @@ MonoBehaviour:
   attackDamage: 10
   attackSpeed: 1
   maxHealth: 0
-  kecepatanGerak: 3
+  kecepatanGerak: 2
   berbalik: 1
 --- !u!70 &1041497315
 CapsuleCollider2D:
@@ -21227,7 +21227,7 @@ MonoBehaviour:
   player: {fileID: 0}
   posisiAwalMusuh: {fileID: 0}
   agroRange: 5
-  moveSpeed: 1.3
+  moveSpeed: 1
   kecepatanGerak: 0
   berbalik: 0
 --- !u!50 &1041497319
@@ -23405,7 +23405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 120.79999, y: 150}
+  m_AnchoredPosition: {x: 120.79999, y: 165}
   m_SizeDelta: {x: 90.369995, y: 14.69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1339231531
@@ -26037,8 +26037,8 @@ MonoBehaviour:
   attackDamage: 10
   attackSpeed: 1
   maxHealth: 0
-  kecepatanGerak: 3
-  berbalik: 1
+  kecepatanGerak: 2
+  berbalik: 0
 --- !u!70 &1442282981
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -26725,8 +26725,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -63, y: 23}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -56.1, y: 30.5}
+  m_SizeDelta: {x: 86.3, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1513703017
 MonoBehaviour:
@@ -27225,8 +27225,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -61.3, y: 29.2}
-  m_SizeDelta: {x: 90.6, y: 89.6}
+  m_AnchoredPosition: {x: -55.5, y: 33.789}
+  m_SizeDelta: {x: 79, y: 80.423}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1579177764
 MonoBehaviour:
@@ -33419,7 +33419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1974147919
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33805,10 +33805,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 228425e7445903546af2e8ed12775790, type: 3}
-    m_FontSize: 57
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 0
     m_MaxSize: 57
     m_Alignment: 0
     m_AlignByGeometry: 0

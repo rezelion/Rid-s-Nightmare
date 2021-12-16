@@ -123,7 +123,7 @@ public class CharacterPlayer : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
             moveSpeed = 10f;
 
-        else moveSpeed = 8f;
+        else moveSpeed = 7f;
         SetAnimitionState();
 
 
@@ -223,9 +223,9 @@ public class CharacterPlayer : MonoBehaviour
             anim.SetBool("IsJumping", false);
             anim.SetBool("IsFalling", false);
         }
-        if (Mathf.Abs(moveInput) == 8 && rb.velocity.y == 0)
+        if (Mathf.Abs(moveInput) == 7 && rb.velocity.y == 0)
             anim.SetBool("IsWalking", true);
-        if (Mathf.Abs(moveInput) == 11 && rb.velocity.y == 0)
+        if (Mathf.Abs(moveInput) == 10 && rb.velocity.y == 0)
             anim.SetBool("IsRunning", true);
         else
             anim.SetBool("IsRunning", false);
