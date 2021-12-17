@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     // Untuk Anak
     public int CollectedAnak, KondisiMenang = 2;
+    public GameObject Menang;
     private void Awake()
     {
         if(instance == null)
@@ -41,7 +42,8 @@ public class GameManager : MonoBehaviour
     {
         if(CollectedAnak >= KondisiMenang)
         {
-            SceneManager.LoadScene("MainMenu");
+            Menang.SetActive(true);
+           
             Destroy(gameObject);
         }
         else
