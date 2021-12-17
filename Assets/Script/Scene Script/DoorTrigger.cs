@@ -5,7 +5,10 @@ public class DoorTrigger : MonoBehaviour
     [SerializeField] private DoorController DoorEnabled;
     public int doorNum;
     private bool playermasuk;
-    
+    public GameObject PintuBuka;
+
+
+
     private static int doorID;
 
 
@@ -21,10 +24,13 @@ public class DoorTrigger : MonoBehaviour
             if (Input.GetKeyDown("e"))
             {
                 DoorEnabled.OpenDoor();
+                //PintuBuka.SetActive(true);
+
             }
             if (Input.GetKeyDown("f"))
             {
                 DoorEnabled.CloseDoor();
+                //PintuBuka.SetActive(false);
             }
         }
     }
@@ -34,6 +40,7 @@ public class DoorTrigger : MonoBehaviour
         if (collision.gameObject.name.Equals("Player"))
         {
             playermasuk = true;
+            PintuBuka.SetActive(true);
 
         }
     }
@@ -42,6 +49,7 @@ public class DoorTrigger : MonoBehaviour
         if (collision.gameObject.name.Equals("Player"))
         {
             playermasuk = false;
+            PintuBuka.SetActive(false);
 
         }
     }

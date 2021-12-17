@@ -6543,11 +6543,11 @@ GameObject:
   m_Component:
   - component: {fileID: 193266250}
   - component: {fileID: 193266256}
-  - component: {fileID: 193266255}
-  - component: {fileID: 193266254}
   - component: {fileID: 193266253}
   - component: {fileID: 193266252}
   - component: {fileID: 193266251}
+  - component: {fileID: 193266254}
+  - component: {fileID: 193266255}
   m_Layer: 0
   m_Name: Kunti (2)
   m_TagString: Hantu
@@ -6639,8 +6639,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5221792, y: -2.337842}
-  m_Size: {x: 16.773388, y: 7.46285}
+  m_Offset: {x: -0.05749808, y: -2.337842}
+  m_Size: {x: 15.61405, y: 7.462852}
   m_Direction: 1
 --- !u!70 &193266255
 CapsuleCollider2D:
@@ -6655,8 +6655,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.3928257, y: -5.915439}
-  m_Size: {x: 18.618248, y: 11.354656}
+  m_Offset: {x: -0.57330054, y: -5.9154377}
+  m_Size: {x: 16.686026, y: 11.35466}
   m_Direction: 1
 --- !u!212 &193266256
 SpriteRenderer:
@@ -6731,7 +6731,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199805905}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 110.08, y: 0.24, z: 0}
+  m_LocalPosition: {x: 112.58, y: 0.24, z: 0}
   m_LocalScale: {x: 1, y: 1.2965833, z: 1}
   m_Children: []
   m_Father: {fileID: 386991002}
@@ -7244,6 +7244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DoorEnabled: {fileID: 1949613712}
   doorNum: 0
+  PintuBuka: {fileID: 1275196955}
 --- !u!1 &260537511
 GameObject:
   m_ObjectHideFlags: 0
@@ -7394,7 +7395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310221899}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -301.63434, y: -1.2300955, z: 3.2578125}
+  m_LocalPosition: {x: -301.63434, y: -2.72, z: 3.2578125}
   m_LocalScale: {x: 1.032, y: 1.126, z: 1}
   m_Children: []
   m_Father: {fileID: 2090290000}
@@ -7438,7 +7439,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0e5f7279c11f945469e4d489d0557e05, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.48235294, g: 0.48235294, b: 0.48235294, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7818,8 +7819,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12334383, y: -11.437665}
-  m_Size: {x: 0.75724554, y: 21.545233}
+  m_Offset: {x: 0.1746049, y: -5.610096}
+  m_Size: {x: 2.910144, y: 33.20037}
   m_Direction: 0
 --- !u!95 &318855033
 Animator:
@@ -8278,10 +8279,10 @@ RectTransform:
   m_Father: {fileID: 655988994}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00005722, y: 0}
-  m_SizeDelta: {x: 1024, y: 768}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &373913596
 MonoBehaviour:
@@ -11845,7 +11846,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 2.6666982, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11856,7 +11857,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 13.2, y: 25.76}
+  m_Size: {x: 6.045445, y: 25.76}
   m_EdgeRadius: 0
 --- !u!114 &583495447
 MonoBehaviour:
@@ -11876,7 +11877,7 @@ MonoBehaviour:
   diplayer1: {fileID: 157979730}
   maxHealthSenter: 100
   SenterSlider: {fileID: 1336466005}
-  jumpForce: 17
+  jumpForce: 10
   feetpos: {fileID: 1083395919}
   checkRadius: 0.3
   WhatIsGround:
@@ -11961,7 +11962,7 @@ SpriteRenderer:
   m_SortingLayerID: -1804108819
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3442ba5a9f78c39429a152b62adb1d20, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 446eb21841d94ea4a916376516c9156e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11979,7 +11980,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583495445}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.86, y: -2.3, z: 0}
   m_LocalScale: {x: -0.14948474, y: 0.132903, z: 1.4704493}
   m_Children:
@@ -12012,7 +12013,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 583495445}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: f9f95a2a226c7cd48823f2cb1358a1c5, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -15258,8 +15259,8 @@ MonoBehaviour:
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1024, y: 768}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -15277,7 +15278,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 489339402}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -16745,7 +16746,7 @@ MonoBehaviour:
   attackDamage: 10
   attackSpeed: 1
   maxHealth: 0
-  kecepatanGerak: 3
+  kecepatanGerak: 2
   berbalik: 1
 --- !u!50 &734578816
 Rigidbody2D:
@@ -16781,8 +16782,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5221792, y: -2.337842}
-  m_Size: {x: 16.773388, y: 7.46285}
+  m_Offset: {x: -0.057498083, y: -2.3378415}
+  m_Size: {x: 15.614049, y: 7.4628515}
   m_Direction: 1
 --- !u!70 &734578818
 CapsuleCollider2D:
@@ -16797,8 +16798,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.3928257, y: -5.915439}
-  m_Size: {x: 18.618248, y: 11.354656}
+  m_Offset: {x: -0.57330054, y: -5.9154377}
+  m_Size: {x: 16.686026, y: 11.35466}
   m_Direction: 1
 --- !u!212 &734578819
 SpriteRenderer:
@@ -17090,80 +17091,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1649214067}
---- !u!1 &767260729
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 767260730}
-  - component: {fileID: 767260732}
-  - component: {fileID: 767260731}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &767260730
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767260729}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1917163397}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -662, y: -377}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &767260731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767260729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d877483d339833a4889e01cdba499762, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &767260732
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767260729}
-  m_CullTransparentMesh: 0
 --- !u!1 &815512246
 GameObject:
   m_ObjectHideFlags: 0
@@ -19701,11 +19628,11 @@ GameObject:
   m_Component:
   - component: {fileID: 997189405}
   - component: {fileID: 997189411}
-  - component: {fileID: 997189410}
-  - component: {fileID: 997189409}
   - component: {fileID: 997189408}
   - component: {fileID: 997189407}
   - component: {fileID: 997189406}
+  - component: {fileID: 997189409}
+  - component: {fileID: 997189410}
   m_Layer: 0
   m_Name: Kunti (3)
   m_TagString: Hantu
@@ -19797,8 +19724,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5221792, y: -2.337842}
-  m_Size: {x: 16.773388, y: 7.46285}
+  m_Offset: {x: -0.05749808, y: -2.337842}
+  m_Size: {x: 15.61405, y: 7.462852}
   m_Direction: 1
 --- !u!70 &997189410
 CapsuleCollider2D:
@@ -19813,8 +19740,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.3928257, y: -5.915439}
-  m_Size: {x: 18.618248, y: 11.354656}
+  m_Offset: {x: -0.57330054, y: -5.9154377}
+  m_Size: {x: 16.686026, y: 11.35466}
   m_Direction: 1
 --- !u!212 &997189411
 SpriteRenderer:
@@ -19934,7 +19861,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 84712417371fed8449845dd77e74cd9c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.48235294, g: 0.48235294, b: 0.48235294, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -19942,7 +19869,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &999035924
 MonoBehaviour:
@@ -21499,6 +21426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DoorEnabled: {fileID: 999035924}
   doorNum: 0
+  PintuBuka: {fileID: 1275196955}
 --- !u!1 &1083395918
 GameObject:
   m_ObjectHideFlags: 0
@@ -21523,7 +21451,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083395918}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9, y: -12.2, z: 0}
+  m_LocalPosition: {x: 1.9, y: -10.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 583495451}
@@ -21736,6 +21664,11 @@ PrefabInstance:
       propertyPath: Kebuka
       value: 
       objectReference: {fileID: 1649214066}
+    - target: {fileID: 1103293537201671686, guid: 1bd05837763886e468810a712b0c85a9,
+        type: 3}
+      propertyPath: pintuKebuka
+      value: 
+      objectReference: {fileID: 1649214066}
     - target: {fileID: 1103293536217053652, guid: 1bd05837763886e468810a712b0c85a9,
         type: 3}
       propertyPath: m_IsActive
@@ -21764,7 +21697,22 @@ PrefabInstance:
     - target: {fileID: 1103293536217053658, guid: 1bd05837763886e468810a712b0c85a9,
         type: 3}
       propertyPath: m_MaskInteraction
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103293536217053658, guid: 1bd05837763886e468810a712b0c85a9,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.4811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103293536217053658, guid: 1bd05837763886e468810a712b0c85a9,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.4811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103293536217053658, guid: 1bd05837763886e468810a712b0c85a9,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.4811321
       objectReference: {fileID: 0}
     - target: {fileID: 1103293536020294400, guid: 1bd05837763886e468810a712b0c85a9,
         type: 3}
@@ -21794,7 +21742,22 @@ PrefabInstance:
     - target: {fileID: 1103293536020294406, guid: 1bd05837763886e468810a712b0c85a9,
         type: 3}
       propertyPath: m_MaskInteraction
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103293536020294406, guid: 1bd05837763886e468810a712b0c85a9,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.48235294
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103293536020294406, guid: 1bd05837763886e468810a712b0c85a9,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.48235294
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103293536020294406, guid: 1bd05837763886e468810a712b0c85a9,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.48235294
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bd05837763886e468810a712b0c85a9, type: 3}
@@ -22835,7 +22798,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1275196956
 Transform:
   m_ObjectHideFlags: 0
@@ -25551,8 +25514,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5221792, y: -2.337842}
-  m_Size: {x: 16.773388, y: 7.46285}
+  m_Offset: {x: -0.05749808, y: -2.337842}
+  m_Size: {x: 15.61405, y: 7.462852}
   m_Direction: 1
 --- !u!70 &1389016164
 CapsuleCollider2D:
@@ -26068,8 +26031,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12334383, y: -11.437665}
-  m_Size: {x: 0.75724554, y: 21.545233}
+  m_Offset: {x: 0.1746049, y: -5.610096}
+  m_Size: {x: 2.910144, y: 33.20037}
   m_Direction: 0
 --- !u!95 &1442282983
 Animator:
@@ -30765,7 +30728,7 @@ MonoBehaviour:
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 10, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -30782,9 +30745,9 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 489339402}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -30809,7 +30772,6 @@ RectTransform:
   - {fileID: 1974147919}
   - {fileID: 313838311}
   - {fileID: 1515782824}
-  - {fileID: 767260730}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30875,10 +30837,10 @@ RectTransform:
   m_Father: {fileID: 655988994}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0.000061035156, y: 0}
-  m_SizeDelta: {x: 1024, y: 768}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925692546
 MonoBehaviour:
@@ -31402,7 +31364,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 84712417371fed8449845dd77e74cd9c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.48235294, g: 0.48235294, b: 0.48235294, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -31410,7 +31372,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1949613712
 MonoBehaviour:
@@ -34401,6 +34363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DoorEnabled: {fileID: 937337244}
   doorNum: 0
+  PintuBuka: {fileID: 1275196955}
 --- !u!1 &2059631904
 GameObject:
   m_ObjectHideFlags: 0

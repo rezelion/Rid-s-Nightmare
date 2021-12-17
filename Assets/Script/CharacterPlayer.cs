@@ -102,17 +102,23 @@ public class CharacterPlayer : MonoBehaviour
         //}
         if(isGrouded == true && Input.GetKeyDown(KeyCode.Space))
         {
-          
+            isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
         }
         if(Input.GetKey(KeyCode.Space) && isJumping == true)
         {
+
             if(jumpTimeCounter > 0)
             {
+                
                 rb.velocity = Vector2.up * jumpForce;
                 jumpTimeCounter -= Time.deltaTime;
             } 
+            else
+            {
+                isJumping = false;
+            }
          
           
         }
@@ -123,7 +129,7 @@ public class CharacterPlayer : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
             moveSpeed = 10f;
 
-        else moveSpeed = 7f;
+        else moveSpeed = 5f;
         SetAnimitionState();
 
 
@@ -223,7 +229,7 @@ public class CharacterPlayer : MonoBehaviour
             anim.SetBool("IsJumping", false);
             anim.SetBool("IsFalling", false);
         }
-        if (Mathf.Abs(moveInput) == 7 && rb.velocity.y == 0)
+        if (Mathf.Abs(moveInput) == 5 && rb.velocity.y == 0)
             anim.SetBool("IsWalking", true);
         if (Mathf.Abs(moveInput) == 10 && rb.velocity.y == 0)
             anim.SetBool("IsRunning", true);

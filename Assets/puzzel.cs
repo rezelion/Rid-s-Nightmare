@@ -5,7 +5,7 @@ using UnityEngine;
 public class puzzel : MonoBehaviour
 {
     [SerializeField]
-    GameObject codePanel, ClosedSafe, OpenedSafe, Kebuka;
+    GameObject codePanel, ClosedSafe, OpenedSafe, Kebuka, pintuKebuka;
     public static bool isSafeOpened = false;
     void Start()
     {
@@ -13,6 +13,7 @@ public class puzzel : MonoBehaviour
         ClosedSafe.SetActive(true);
         OpenedSafe.SetActive(false);
         Kebuka.SetActive(false);
+        pintuKebuka.SetActive(false);
 
     }
 
@@ -26,6 +27,7 @@ public class puzzel : MonoBehaviour
             ClosedSafe.SetActive(false);
             OpenedSafe.SetActive(true);
             Kebuka.SetActive(true);
+            pintuKebuka.SetActive(true);
 
         }
     }

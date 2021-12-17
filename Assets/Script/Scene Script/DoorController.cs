@@ -3,7 +3,7 @@
 public class DoorController : MonoBehaviour
 {
     public GameObject DoorCollider;
-
+    
     public void OpenDoor()
     {
         DoorCollider.GetComponent<BoxCollider2D>().enabled = true;
