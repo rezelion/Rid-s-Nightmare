@@ -82,24 +82,15 @@ public class CharacterPlayer : MonoBehaviour
             // Destroy(gameObject);
         }
     }
+  
 
     void Update()
     {
-
        if(health == 0)
         {
             mati();
         }
-
         isGrouded = Physics2D.OverlapCircle(feetpos.position, checkRadius, WhatIsGround);
-        //if(moveInput > 0)
-        //{
-        //    transform.eulerAngles = new Vector3(0, 0, 0);
-
-        //}else if(moveInput < 0)
-        //{
-        //    transform.eulerAngles = new Vector3(0, 180, 0);
-        //}
         if(isGrouded == true && Input.GetKeyDown(KeyCode.Space))
         {
             isJumping = true;
@@ -108,7 +99,6 @@ public class CharacterPlayer : MonoBehaviour
         }
         if(Input.GetKey(KeyCode.Space) && isJumping == true)
         {
-
             if(jumpTimeCounter > 0)
             {
                 
@@ -119,38 +109,14 @@ public class CharacterPlayer : MonoBehaviour
             {
                 isJumping = false;
             }
-         
-          
         }
-     
-       
         cutdown();
-    
         if (Input.GetKey(KeyCode.LeftShift))
-            moveSpeed = 10f;
-
+            moveSpeed = 7f;
         else moveSpeed = 5f;
         SetAnimitionState();
-
-
-
-
-        // Puzzel
-
-        // Komen
-        //if (isGrouded)
-        //{
-        //    tempPlayerJumps = playerJumps;
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.Space) && tempPlayerJumps > 0)
-        //{
-        //    rb.velocity = Vector2.up * Jumpforce;
-        //    tempPlayerJumps--;
-        //}
-
-        //sentermati();
     }
+  
 
 
     private void sentermati()
@@ -231,7 +197,7 @@ public class CharacterPlayer : MonoBehaviour
         }
         if (Mathf.Abs(moveInput) == 5 && rb.velocity.y == 0)
             anim.SetBool("IsWalking", true);
-        if (Mathf.Abs(moveInput) == 10 && rb.velocity.y == 0)
+        if (Mathf.Abs(moveInput) == 7 && rb.velocity.y == 0)
             anim.SetBool("IsRunning", true);
         else
             anim.SetBool("IsRunning", false);

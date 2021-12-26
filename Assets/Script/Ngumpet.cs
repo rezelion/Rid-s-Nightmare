@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Ngumpet : MonoBehaviour
 {
     [SerializeField]
-    GameObject buka, tutup, Player, anak;
+    GameObject buka, tutup, Player, masuk, keluar;
     bool playerngumpet;
 
     // Start is called before the first frame update
@@ -28,14 +28,17 @@ public class Ngumpet : MonoBehaviour
                 buka.SetActive(false);
                 tutup.SetActive(true);
                 Player.SetActive(false);
-                anak.SetActive(false);
+                keluar.SetActive(true);
+                masuk.SetActive(false);
+                
             }
             if (Input.GetKey(KeyCode.E))
             {
                 buka.SetActive(true);
                 tutup.SetActive(false);
                 Player.SetActive(true);
-                anak.SetActive(true);
+                keluar.SetActive(false);
+                masuk.SetActive(true);
             }
         }
     }
@@ -45,6 +48,7 @@ public class Ngumpet : MonoBehaviour
         if (col.gameObject.name.Equals("Player"))
         {
             playerngumpet = true;
+            masuk.SetActive(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -52,6 +56,7 @@ public class Ngumpet : MonoBehaviour
         if (collision.gameObject.name.Equals("Player"))
         {
             playerngumpet = false;
+            masuk.SetActive(false);
         }
     }
 
