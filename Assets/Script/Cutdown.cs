@@ -4,14 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Cutdown : MonoBehaviour
 {
-    Animator anim;
+    [SerializeField]
+    GameObject gameOverScreen;
+
+    //Animator anim;
     float currentTime1 = 0f;
     public float startingTime1 = 1f;
     [SerializeField] Text cutdown1;
     bool  isDead;
+
     void Start()
     {
-        anim = GetComponent<Animator>();
+        gameOverScreen.SetActive(false);
+        //anim = GetComponent<Animator>();
         currentTime1 = startingTime1;
     }
     private void Update()
@@ -39,8 +44,8 @@ public class Cutdown : MonoBehaviour
         //{
         //    Destroy(o);
         //}
-
+        gameOverScreen.SetActive(true);
             isDead = true;
-        anim.SetTrigger("IsDead");
+        //anim.SetTrigger("IsDead");
     }
 }
