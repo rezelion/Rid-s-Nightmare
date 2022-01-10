@@ -292,7 +292,7 @@ public class CharacterPlayer : MonoBehaviour
         if (col.gameObject.CompareTag("Battery"))
         {
              Destroy(col.gameObject);
-            healthSenter += 20;
+            healthSenter += 25;
             diplayer.enabled = true;
             diplayer1.enabled = true;
         }
@@ -304,6 +304,7 @@ public class CharacterPlayer : MonoBehaviour
         dirX = 0;
         isDead = true;
         anim.SetTrigger("IsDead");
+        src.SetActive(true);
     }
 
     public void woi()

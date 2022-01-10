@@ -60,7 +60,7 @@ public class Pause : MonoBehaviour
     public void Restart()
     {
         pauseMenu.SetActive(false);
-        GamePause = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
+        SceneManager.LoadScene("LV1_Alternates");
     }
 }

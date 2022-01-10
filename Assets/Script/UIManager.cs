@@ -30,7 +30,7 @@ public class UIManager : MonoBehaviour
     }
     public void UpdateAnakUi(int _Anak, int _MenangKondisi)
     {
-        txtAnak.text = "Anak : " + _Anak + " / " + _MenangKondisi;
+        txtAnak.text =" = " + _Anak + " / " + _MenangKondisi;
     }
 
     public void ShowKondisiMenang(int _Anak, int _MenangKondisi)

@@ -6,14 +6,18 @@ using UnityEngine.UI;
 public class Ngumpet : MonoBehaviour
 {
     [SerializeField]
-    GameObject buka, tutup, Player, masuk, keluar;
+    GameObject buka, tutup, Player, masuk, keluar, suaraTutup, suaraBuka;
     bool playerngumpet;
+
+    // audio
 
     // Start is called before the first frame update
     void Start()
     {
         buka.SetActive(true);
         tutup.SetActive(false);
+        suaraTutup.SetActive(false);
+        suaraBuka.SetActive(false);
       
     }
 
@@ -25,6 +29,8 @@ public class Ngumpet : MonoBehaviour
             Debug.Log("Player Pintu");
             if (Input.GetKey(KeyCode.R))
             {
+                suaraTutup.SetActive(true);
+                suaraBuka.SetActive(false);
                 buka.SetActive(false);
                 tutup.SetActive(true);
                 Player.SetActive(false);
@@ -34,6 +40,8 @@ public class Ngumpet : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.E))
             {
+                suaraTutup.SetActive(false);
+                suaraBuka.SetActive(true);
                 buka.SetActive(true);
                 tutup.SetActive(false);
                 Player.SetActive(true);
