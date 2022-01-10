@@ -47,10 +47,6 @@ public class CharacterPlayer : MonoBehaviour
     public float jumpTime;
     public bool isJumping;
 
-    // Audio
-    AudioSource audiosrc;
-    public GameObject src;
-
 
 
 
@@ -68,11 +64,6 @@ public class CharacterPlayer : MonoBehaviour
         // Senter
         healthSenter = maxHealthSenter;
         SenterSlider.maxValue = maxHealthSenter;
-
-        // Audio
-        audiosrc = GetComponent<AudioSource>();
-        src.SetActive(false);
-       
 
 
     }
@@ -100,10 +91,8 @@ public class CharacterPlayer : MonoBehaviour
             mati();
         }
         isGrouded = Physics2D.OverlapCircle(feetpos.position, checkRadius, WhatIsGround);
-        if(isGrouded == true && Input.GetKeyDown(KeyCode.Space) )
+        if(isGrouded == true && Input.GetKeyDown(KeyCode.Space))
         {
-            
-            audiosrc.Stop();
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
@@ -112,42 +101,20 @@ public class CharacterPlayer : MonoBehaviour
         {
             if(jumpTimeCounter > 0)
             {
-                audiosrc.Stop();
-
+                
                 rb.velocity = Vector2.up * jumpForce;
                 jumpTimeCounter -= Time.deltaTime;
             } 
             else
             {
-                audiosrc.Stop();
                 isJumping = false;
             }
         }
         cutdown();
         if (Input.GetKey(KeyCode.LeftShift))
-
-        {
             moveSpeed = 7f;
-        }
-        else
-        {
-            moveSpeed = 5f;
-          
-        }
-        if(moveInput == 0)
-        {
-           
-            audiosrc.Stop();
-        }
-        else
-        {
-            if (!audiosrc.isPlaying)
-                audiosrc.Play();
-        }
-       
-        
+        else moveSpeed = 5f;
         SetAnimitionState();
-        
     }
   
 
@@ -197,8 +164,6 @@ public class CharacterPlayer : MonoBehaviour
 
         if (!isDead)
         
-
-
             moveInput = Input.GetAxisRaw("Horizontal") * moveSpeed;
         
            
@@ -227,7 +192,6 @@ public class CharacterPlayer : MonoBehaviour
         }
         if (rb.velocity.y == 0)
         {
-            
             anim.SetBool("IsJumping", false);
             anim.SetBool("IsFalling", false);
         }
@@ -248,7 +212,6 @@ public class CharacterPlayer : MonoBehaviour
         // Pas Jatuh
         if (rb.velocity.y < 0)
         {
-            audiosrc.Stop();
             anim.SetBool("IsJumping", false);
             anim.SetBool("IsFalling", true);
         }
@@ -312,16 +275,11 @@ public class CharacterPlayer : MonoBehaviour
     }
     
     public void mati()
-
     {
-
-
-        src.SetActive(true);
-
+       
         dirX = 0;
         isDead = true;
         anim.SetTrigger("IsDead");
-        
     }
 
     public void woi()

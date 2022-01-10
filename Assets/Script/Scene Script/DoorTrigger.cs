@@ -16,10 +16,6 @@ public class DoorTrigger : MonoBehaviour
     //{
     //    doorID = doorNum;
     //}
-    private void Start()
-    {
-        DoorEnabled.OpenDoor();
-    }
     private void Update()
     {
         if (playermasuk)
