@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Cutdown : MonoBehaviour
 {
     [SerializeField]
-    GameObject gameOverScreen;
+    GameObject gameOverScreen,GameOver;
 
     //Animator anim;
     float currentTime1 = 0f;
@@ -13,8 +13,10 @@ public class Cutdown : MonoBehaviour
     [SerializeField] Text cutdown1;
     bool  isDead;
 
+
     void Start()
     {
+        GameOver.SetActive(false);
         gameOverScreen.SetActive(false);
         //anim = GetComponent<Animator>();
         currentTime1 = startingTime1;
@@ -44,6 +46,7 @@ public class Cutdown : MonoBehaviour
         //{
         //    Destroy(o);
         //}
+        GameOver.SetActive(true);
         gameOverScreen.SetActive(true);
             isDead = true;
         //anim.SetTrigger("IsDead");
