@@ -13,11 +13,16 @@ public class Cutdown : MonoBehaviour
     [SerializeField] Text cutdown1;
     bool  isDead;
 
+    // Audio
+    AudioSource audiosrc;
+
     void Start()
     {
         gameOverScreen.SetActive(false);
         //anim = GetComponent<Animator>();
         currentTime1 = startingTime1;
+        // Audio
+        audiosrc = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -33,17 +38,19 @@ public class Cutdown : MonoBehaviour
         {
             mati();
             currentTime1 = 0;
-           
+            if (!audiosrc.isPlaying)
+                audiosrc.Play();
         }
 
     }
     public void mati()
     {
-
+        
         //foreach (GameObject o in Object.FindObjectsOfType<GameObject>())
         //{
         //    Destroy(o);
         //}
+     
         gameOverScreen.SetActive(true);
             isDead = true;
         //anim.SetTrigger("IsDead");

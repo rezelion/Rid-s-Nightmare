@@ -22,15 +22,21 @@ public class Ngumpet : MonoBehaviour
     {
         if (playerngumpet)
         {
+           
             Debug.Log("Player Pintu");
             if (Input.GetKey(KeyCode.R))
             {
+
+                
                 buka.SetActive(false);
+          
                 tutup.SetActive(true);
+               
                 Player.SetActive(false);
                 keluar.SetActive(true);
                 masuk.SetActive(false);
-                
+               
+
             }
             if (Input.GetKey(KeyCode.E))
             {
@@ -39,6 +45,7 @@ public class Ngumpet : MonoBehaviour
                 Player.SetActive(true);
                 keluar.SetActive(false);
                 masuk.SetActive(true);
+               
             }
         }
     }

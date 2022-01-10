@@ -13,11 +13,14 @@ public class PlayerTeleport : MonoBehaviour
     }
     private void Update()
     {
+
         if(Input.GetKeyDown(KeyCode.W))
         {
             if(currentTeleport != null)
             {
+               
                 transform.position = currentTeleport.GetComponent<Teleport>().GetDistanitaon().position;
+                SoundManager.playSound("TutupPintu");
             }
         }
     }

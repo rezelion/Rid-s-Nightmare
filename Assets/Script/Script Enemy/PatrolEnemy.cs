@@ -23,6 +23,7 @@ public class PatrolEnemy : MonoBehaviour
 
     public float kecepatanGerak;
     public bool berbalik;
+   
 
 
     void Start()
@@ -31,6 +32,7 @@ public class PatrolEnemy : MonoBehaviour
 
         berbalik = false;
         rb = GetComponent<Rigidbody2D>();
+        
     }
 
     public void TakeDamage(float dmg)
