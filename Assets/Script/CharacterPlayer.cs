@@ -230,8 +230,7 @@ public class CharacterPlayer : MonoBehaviour
         else
             anim.SetBool("IsCrouch", false);
 
-        if (rb.velocity.y > 0)
-            anim.SetBool("IsJumping", true);
+     
 
         // Pas Jatuh
         if (rb.velocity.y < 0)

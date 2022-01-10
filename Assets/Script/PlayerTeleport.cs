@@ -20,7 +20,7 @@ public class PlayerTeleport : MonoBehaviour
             {
                
                 transform.position = currentTeleport.GetComponent<Teleport>().GetDistanitaon().position;
-                SoundManager.playSound("TutupPintu");
+                AudioManager.playSound("TutupPintu");
 
             }
         }
