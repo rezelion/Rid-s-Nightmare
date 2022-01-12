@@ -274,14 +274,45 @@ public class CharacterPlayer : MonoBehaviour
         {
             health -= 10;
         }
+        if (col.gameObject.tag == "Tuyul")
+        {
+            health -= 5;
+        }
+        if (col.gameObject.tag == "Kunti")
+        {
+            health -= 10;
+        }
+        if (col.gameObject.tag == "Pocong")
+        {
+            health -= 15;
+        }
         if (col.gameObject.tag == "Hantu" && health > 0)
         {
             
             anim.SetTrigger("IsHurt");
           
             StartCoroutine("Hurt");
-            
-            
+        }
+        if (col.gameObject.tag == "Tuyul" && health > 0)
+        {
+
+            anim.SetTrigger("IsHurt");
+
+            StartCoroutine("Hurt");
+        }
+        if (col.gameObject.tag == "Pocong" && health > 0)
+        {
+
+            anim.SetTrigger("IsHurt");
+
+            StartCoroutine("Hurt");
+        }
+        if (col.gameObject.tag == "Kunti" && health > 0)
+        {
+
+            anim.SetTrigger("IsHurt");
+
+            StartCoroutine("Hurt");
         }
         if (col.gameObject.tag == "Hantu" && health == 0)
         {

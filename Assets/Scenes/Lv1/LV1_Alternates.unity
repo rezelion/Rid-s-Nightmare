@@ -3814,9 +3814,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Life Baterai
-
-'
+  m_Text: Battery Life
 --- !u!222 &141310080
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6649,7 +6647,7 @@ GameObject:
   - component: {fileID: 193266255}
   m_Layer: 0
   m_Name: Kunti (2)
-  m_TagString: Hantu
+  m_TagString: Kunti
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7489,7 +7487,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 72335ccc3867edc4990f110970e287c0, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -7587,7 +7585,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1852088379}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &298927941
 GameObject:
@@ -8181,7 +8179,7 @@ GameObject:
   - component: {fileID: 318855030}
   m_Layer: 0
   m_Name: Pocong (2)
-  m_TagString: Hantu
+  m_TagString: Pocong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17983,7 +17981,7 @@ GameObject:
   - component: {fileID: 734578814}
   m_Layer: 0
   m_Name: Kunti
-  m_TagString: Hantu
+  m_TagString: Kunti
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19572,7 +19570,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1852088379}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &949864446
 GameObject:
@@ -21020,6 +21018,85 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &959015856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959015858}
+  - component: {fileID: 959015857}
+  m_Layer: 0
+  m_Name: NPC2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &959015857
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959015856}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: cd2e95ad11346c543856ddecdafd5bff, type: 3}
+  m_Color: {r: 0.5058824, g: 0.5058824, b: 0.5058824, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 30.000002, y: 30.000002}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 1
+  m_SpriteSortPoint: 0
+--- !u!4 &959015858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959015856}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 222.45, y: -2.23, z: 0}
+  m_LocalScale: {x: 0.14266063, y: 0.13240476, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &964562051
 GameObject:
   m_ObjectHideFlags: 0
@@ -21386,7 +21463,7 @@ GameObject:
   - component: {fileID: 997189410}
   m_Layer: 0
   m_Name: Kunti (3)
-  m_TagString: Hantu
+  m_TagString: Kunti
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22800,7 +22877,7 @@ GameObject:
   - component: {fileID: 1041497314}
   m_Layer: 0
   m_Name: Pocong
-  m_TagString: Hantu
+  m_TagString: Pocong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27687,7 +27764,7 @@ GameObject:
   - component: {fileID: 1383850494}
   m_Layer: 0
   m_Name: Tuyul
-  m_TagString: Hantu
+  m_TagString: Tuyul
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27704,7 +27781,7 @@ Transform:
   m_LocalScale: {x: 0.0954227, y: 0.094747715, z: 0.44055375}
   m_Children: []
   m_Father: {fileID: 1852088379}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1383850494
 Animator:
@@ -27737,10 +27814,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62dd3f4110ec79445b523a70ff502308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
+  attackDamage: 2
   attackSpeed: 1
   maxHealth: 0
-  kecepatanGerak: 5
+  kecepatanGerak: 4
   berbalik: 1
 --- !u!50 &1383850496
 Rigidbody2D:
@@ -27969,7 +28046,7 @@ GameObject:
   - component: {fileID: 1389016160}
   m_Layer: 0
   m_Name: Kunti (1)
-  m_TagString: Hantu
+  m_TagString: Kunti
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28759,7 +28836,7 @@ GameObject:
   - component: {fileID: 1442282980}
   m_Layer: 0
   m_Name: Pocong (1)
-  m_TagString: Hantu
+  m_TagString: Pocong
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33639,7 +33716,7 @@ GameObject:
   - component: {fileID: 1819751630}
   m_Layer: 0
   m_Name: Kunti (4)
-  m_TagString: Hantu
+  m_TagString: Kunti
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33988,9 +34065,9 @@ Transform:
   - {fileID: 193266250}
   - {fileID: 997189405}
   - {fileID: 1819751629}
+  - {fileID: 1383850493}
   - {fileID: 288692398}
   - {fileID: 947287999}
-  - {fileID: 1383850493}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -37556,8 +37633,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64.553, y: 77.5}
-  m_SizeDelta: {x: 612.31, y: 243.39}
+  m_AnchoredPosition: {x: -0.00001049, y: 31}
+  m_SizeDelta: {x: 451.45, y: 164.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1974147920
 MonoBehaviour:
@@ -37580,13 +37657,13 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 228425e7445903546af2e8ed12775790, type: 3}
-    m_FontSize: 85
-    m_FontStyle: 0
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 43
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 6
     m_MaxSize: 85
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
