@@ -1111,7 +1111,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 4. Selamat kan ke pintu EXIT
+  m_Text: 4. Selamat kan ke NPC PEREMPUAN
 --- !u!222 &502378125
 CanvasRenderer:
   m_ObjectHideFlags: 0
