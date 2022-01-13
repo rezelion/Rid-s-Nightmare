@@ -196,7 +196,7 @@ public class CharacterPlayer : MonoBehaviour
            
 
         //isGrouded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, ground);
-        if (!isHurt)
+        if (!isDead)
         
             rb.velocity = new Vector2(moveInput, rb.velocity.y);
         
@@ -357,12 +357,7 @@ public class CharacterPlayer : MonoBehaviour
         HideUi.SetActive(false);
     }
 
-    public void woi()
-    {
-        dirX = 0;
-        isDead = false;
-        
-    }
+   
     private void OnGUI()
     {
         float t = Time.deltaTime / 1f;
@@ -378,7 +373,7 @@ public class CharacterPlayer : MonoBehaviour
        
         if (kiri)
 
-            rb.AddForce(new Vector2(-400f, 400f) );
+            rb.AddForce(new Vector2(-400f, 200f) );
 
 
         else

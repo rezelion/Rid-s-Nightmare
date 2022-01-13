@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Ngumpet : MonoBehaviour
 {
     [SerializeField]
-    GameObject buka, tutup, Player, masuk, keluar, suaraTutup, suaraBuka;
+    GameObject buka, tutup, Player, masuk, keluar, suaraTutup, suaraBuka, Hurt;
     bool playerngumpet;
 
     // audio
@@ -40,6 +40,7 @@ public class Ngumpet : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.E))
             {
+                Hurt.SetActive(false);
                 suaraTutup.SetActive(false);
                 suaraBuka.SetActive(true);
                 buka.SetActive(true);
