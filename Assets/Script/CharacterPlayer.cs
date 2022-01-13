@@ -50,11 +50,14 @@ public class CharacterPlayer : MonoBehaviour
     AudioSource audiosrc;
     public GameObject src;
 
+    [SerializeField] GameObject HideUi;
+
 
 
 
     private void Start()
     {
+        
         currentTime = startingTime;
         health = maxHealth;
         healthSlider.maxValue = maxHealth;
@@ -319,6 +322,21 @@ public class CharacterPlayer : MonoBehaviour
             
             mati();
         }
+        if (col.gameObject.tag == "Pocong" && health == 0)
+        {
+
+            mati();
+        }
+        if (col.gameObject.tag == "Tuyul" && health == 0)
+        {
+
+            mati();
+        }
+        if (col.gameObject.tag == "Kunti" && health == 0)
+        {
+
+            mati();
+        }
 
         if (col.gameObject.CompareTag("Battery"))
         {
@@ -336,6 +354,7 @@ public class CharacterPlayer : MonoBehaviour
         isDead = true;
         anim.SetTrigger("IsDead");
         src.SetActive(true);
+        HideUi.SetActive(false);
     }
 
     public void woi()
@@ -347,7 +366,7 @@ public class CharacterPlayer : MonoBehaviour
     private void OnGUI()
     {
         float t = Time.deltaTime / 1f;
-        float r = Time.deltaTime / 0.1f;
+        float r = Time.deltaTime / 1f;
         healthSlider.value = Mathf.Lerp(healthSlider.value, health, t);
         SenterSlider.value = Mathf.Lerp(SenterSlider.value, healthSenter, r);
     }

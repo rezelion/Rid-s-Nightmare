@@ -60,7 +60,7 @@ public class Pause : MonoBehaviour
     public void Restart()
     {
         pauseMenu.SetActive(false);
-        
-        SceneManager.LoadScene("LV1_Alternates");
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
