@@ -373,7 +373,7 @@ public class CharacterPlayer : MonoBehaviour
        
         if (kiri)
 
-            rb.AddForce(new Vector2(-400f, 400f) );
+            rb.AddForce(new Vector2(-400f, 200f) );
 
 
         else
